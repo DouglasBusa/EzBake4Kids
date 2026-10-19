@@ -1,0 +1,16 @@
+{
+  "name": "EzBake4Kids",
+  "short_name": "EzBake",
+  "description": "A free baking and lunchbox game for little kids. No ads, no accounts.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#FFF4E0",
+  "theme_color": "#F7A8C0",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

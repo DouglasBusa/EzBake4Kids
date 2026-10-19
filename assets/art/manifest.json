@@ -1,0 +1,4441 @@
+{
+ "game": "EzBake4Kids",
+ "batch": "mvp-cupcakes-cookies",
+ "version": "0.1",
+ "idRule": "id = file name without extension; states are id suffixes; png@2x shares the svg id; background rasters add -WxH",
+ "files": [
+  {
+   "id": "ingredient-flour",
+   "file": "ingredients/svg/ingredient-flour.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 1535,
+   "states": []
+  },
+  {
+   "id": "ingredient-flour",
+   "file": "ingredients/png@2x/ingredient-flour.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 21235,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-sugar",
+   "file": "ingredients/svg/ingredient-sugar.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 1653,
+   "states": []
+  },
+  {
+   "id": "ingredient-sugar",
+   "file": "ingredients/png@2x/ingredient-sugar.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 19698,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-egg-whole",
+   "file": "ingredients/svg/ingredient-egg-whole.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 377,
+   "states": [
+    "whole"
+   ]
+  },
+  {
+   "id": "ingredient-egg-whole",
+   "file": "ingredients/png@2x/ingredient-egg-whole.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 16436,
+   "states": [
+    "whole"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-egg-cracked",
+   "file": "ingredients/svg/ingredient-egg-cracked.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 525,
+   "states": [
+    "cracked"
+   ]
+  },
+  {
+   "id": "ingredient-egg-cracked",
+   "file": "ingredients/png@2x/ingredient-egg-cracked.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 21525,
+   "states": [
+    "cracked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-egg-shell-halves",
+   "file": "ingredients/svg/ingredient-egg-shell-halves.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 736,
+   "states": [
+    "shell-halves"
+   ]
+  },
+  {
+   "id": "ingredient-egg-shell-halves",
+   "file": "ingredients/png@2x/ingredient-egg-shell-halves.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 21101,
+   "states": [
+    "shell-halves"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-milk",
+   "file": "ingredients/svg/ingredient-milk.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 772,
+   "states": []
+  },
+  {
+   "id": "ingredient-milk",
+   "file": "ingredients/png@2x/ingredient-milk.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 9015,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-butter",
+   "file": "ingredients/svg/ingredient-butter.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 727,
+   "states": []
+  },
+  {
+   "id": "ingredient-butter",
+   "file": "ingredients/png@2x/ingredient-butter.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 15406,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "ingredient-choc-chips",
+   "file": "ingredients/svg/ingredient-choc-chips.svg",
+   "format": "svg",
+   "type": "ingredients",
+   "width": 256,
+   "height": 256,
+   "bytes": 945,
+   "states": []
+  },
+  {
+   "id": "ingredient-choc-chips",
+   "file": "ingredients/png@2x/ingredient-choc-chips.png",
+   "format": "png@2x",
+   "type": "ingredients",
+   "width": 512,
+   "height": 512,
+   "bytes": 21654,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "bowl-fill-0",
+   "file": "tools/svg/bowl-fill-0.svg",
+   "format": "svg",
+   "type": "bowl",
+   "width": 256,
+   "height": 256,
+   "bytes": 643,
+   "states": [
+    "fill-0"
+   ]
+  },
+  {
+   "id": "bowl-fill-0",
+   "file": "tools/png@2x/bowl-fill-0.png",
+   "format": "png@2x",
+   "type": "bowl",
+   "width": 512,
+   "height": 512,
+   "bytes": 19323,
+   "states": [
+    "fill-0"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "bowl-fill-25",
+   "file": "tools/svg/bowl-fill-25.svg",
+   "format": "svg",
+   "type": "bowl",
+   "width": 256,
+   "height": 256,
+   "bytes": 784,
+   "states": [
+    "fill-25"
+   ]
+  },
+  {
+   "id": "bowl-fill-25",
+   "file": "tools/png@2x/bowl-fill-25.png",
+   "format": "png@2x",
+   "type": "bowl",
+   "width": 512,
+   "height": 512,
+   "bytes": 22986,
+   "states": [
+    "fill-25"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "bowl-fill-50",
+   "file": "tools/svg/bowl-fill-50.svg",
+   "format": "svg",
+   "type": "bowl",
+   "width": 256,
+   "height": 256,
+   "bytes": 785,
+   "states": [
+    "fill-50"
+   ]
+  },
+  {
+   "id": "bowl-fill-50",
+   "file": "tools/png@2x/bowl-fill-50.png",
+   "format": "png@2x",
+   "type": "bowl",
+   "width": 512,
+   "height": 512,
+   "bytes": 24382,
+   "states": [
+    "fill-50"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "bowl-fill-75",
+   "file": "tools/svg/bowl-fill-75.svg",
+   "format": "svg",
+   "type": "bowl",
+   "width": 256,
+   "height": 256,
+   "bytes": 930,
+   "states": [
+    "fill-75"
+   ]
+  },
+  {
+   "id": "bowl-fill-75",
+   "file": "tools/png@2x/bowl-fill-75.png",
+   "format": "png@2x",
+   "type": "bowl",
+   "width": 512,
+   "height": 512,
+   "bytes": 25376,
+   "states": [
+    "fill-75"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "bowl-fill-100",
+   "file": "tools/svg/bowl-fill-100.svg",
+   "format": "svg",
+   "type": "bowl",
+   "width": 256,
+   "height": 256,
+   "bytes": 935,
+   "states": [
+    "fill-100"
+   ]
+  },
+  {
+   "id": "bowl-fill-100",
+   "file": "tools/png@2x/bowl-fill-100.png",
+   "format": "png@2x",
+   "type": "bowl",
+   "width": 512,
+   "height": 512,
+   "bytes": 27819,
+   "states": [
+    "fill-100"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "tool-wooden-spoon",
+   "file": "tools/svg/tool-wooden-spoon.svg",
+   "format": "svg",
+   "type": "tools",
+   "width": 256,
+   "height": 256,
+   "bytes": 581,
+   "states": []
+  },
+  {
+   "id": "tool-wooden-spoon",
+   "file": "tools/png@2x/tool-wooden-spoon.png",
+   "format": "png@2x",
+   "type": "tools",
+   "width": 512,
+   "height": 512,
+   "bytes": 17506,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "tool-whisk",
+   "file": "tools/svg/tool-whisk.svg",
+   "format": "svg",
+   "type": "tools",
+   "width": 256,
+   "height": 256,
+   "bytes": 694,
+   "states": []
+  },
+  {
+   "id": "tool-whisk",
+   "file": "tools/png@2x/tool-whisk.png",
+   "format": "png@2x",
+   "type": "tools",
+   "width": 512,
+   "height": 512,
+   "bytes": 28958,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "tool-rolling-pin",
+   "file": "tools/svg/tool-rolling-pin.svg",
+   "format": "svg",
+   "type": "tools",
+   "width": 256,
+   "height": 256,
+   "bytes": 653,
+   "states": []
+  },
+  {
+   "id": "tool-rolling-pin",
+   "file": "tools/png@2x/tool-rolling-pin.png",
+   "format": "png@2x",
+   "type": "tools",
+   "width": 512,
+   "height": 512,
+   "bytes": 17210,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "tool-piping-bag",
+   "file": "tools/svg/tool-piping-bag.svg",
+   "format": "svg",
+   "type": "tools",
+   "width": 256,
+   "height": 256,
+   "bytes": 743,
+   "states": []
+  },
+  {
+   "id": "tool-piping-bag",
+   "file": "tools/png@2x/tool-piping-bag.png",
+   "format": "png@2x",
+   "type": "tools",
+   "width": 512,
+   "height": 512,
+   "bytes": 25809,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "tool-sprinkle-shaker",
+   "file": "tools/svg/tool-sprinkle-shaker.svg",
+   "format": "svg",
+   "type": "tools",
+   "width": 256,
+   "height": 256,
+   "bytes": 1178,
+   "states": []
+  },
+  {
+   "id": "tool-sprinkle-shaker",
+   "file": "tools/png@2x/tool-sprinkle-shaker.png",
+   "format": "png@2x",
+   "type": "tools",
+   "width": 512,
+   "height": 512,
+   "bytes": 14353,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "cutter-heart",
+   "file": "tools/svg/cutter-heart.svg",
+   "format": "svg",
+   "type": "cookie-cutter",
+   "width": 256,
+   "height": 256,
+   "bytes": 438,
+   "states": [
+    "heart"
+   ]
+  },
+  {
+   "id": "cutter-heart",
+   "file": "tools/png@2x/cutter-heart.png",
+   "format": "png@2x",
+   "type": "cookie-cutter",
+   "width": 512,
+   "height": 512,
+   "bytes": 16798,
+   "states": [
+    "heart"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cutter-star",
+   "file": "tools/svg/cutter-star.svg",
+   "format": "svg",
+   "type": "cookie-cutter",
+   "width": 256,
+   "height": 256,
+   "bytes": 664,
+   "states": [
+    "star"
+   ]
+  },
+  {
+   "id": "cutter-star",
+   "file": "tools/png@2x/cutter-star.png",
+   "format": "png@2x",
+   "type": "cookie-cutter",
+   "width": 512,
+   "height": 512,
+   "bytes": 18993,
+   "states": [
+    "star"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cutter-bunny",
+   "file": "tools/svg/cutter-bunny.svg",
+   "format": "svg",
+   "type": "cookie-cutter",
+   "width": 256,
+   "height": 256,
+   "bytes": 739,
+   "states": [
+    "bunny"
+   ]
+  },
+  {
+   "id": "cutter-bunny",
+   "file": "tools/png@2x/cutter-bunny.png",
+   "format": "png@2x",
+   "type": "cookie-cutter",
+   "width": 512,
+   "height": 512,
+   "bytes": 22732,
+   "states": [
+    "bunny"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cutter-flower",
+   "file": "tools/svg/cutter-flower.svg",
+   "format": "svg",
+   "type": "cookie-cutter",
+   "width": 256,
+   "height": 256,
+   "bytes": 1158,
+   "states": [
+    "flower"
+   ]
+  },
+  {
+   "id": "cutter-flower",
+   "file": "tools/png@2x/cutter-flower.png",
+   "format": "png@2x",
+   "type": "cookie-cutter",
+   "width": 512,
+   "height": 512,
+   "bytes": 20873,
+   "states": [
+    "flower"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "oven-door-closed",
+   "file": "tools/svg/oven-door-closed.svg",
+   "format": "svg",
+   "type": "oven",
+   "width": 512,
+   "height": 512,
+   "bytes": 1594,
+   "states": [
+    "closed"
+   ]
+  },
+  {
+   "id": "oven-door-closed",
+   "file": "tools/png@2x/oven-door-closed.png",
+   "format": "png@2x",
+   "type": "oven",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 40100,
+   "states": [
+    "closed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "oven-door-open",
+   "file": "tools/svg/oven-door-open.svg",
+   "format": "svg",
+   "type": "oven",
+   "width": 512,
+   "height": 512,
+   "bytes": 1620,
+   "states": [
+    "open"
+   ]
+  },
+  {
+   "id": "oven-door-open",
+   "file": "tools/png@2x/oven-door-open.png",
+   "format": "png@2x",
+   "type": "oven",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 34573,
+   "states": [
+    "open"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "oven-window-glow",
+   "file": "tools/svg/oven-window-glow.svg",
+   "format": "svg",
+   "type": "oven",
+   "width": 512,
+   "height": 512,
+   "bytes": 2017,
+   "states": [
+    "glow"
+   ]
+  },
+  {
+   "id": "oven-window-glow",
+   "file": "tools/png@2x/oven-window-glow.png",
+   "format": "png@2x",
+   "type": "oven",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 46477,
+   "states": [
+    "glow"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "oven-dial",
+   "file": "tools/svg/oven-dial.svg",
+   "format": "svg",
+   "type": "oven",
+   "width": 256,
+   "height": 256,
+   "bytes": 1259,
+   "states": [
+    "dial"
+   ]
+  },
+  {
+   "id": "oven-dial",
+   "file": "tools/png@2x/oven-dial.png",
+   "format": "png@2x",
+   "type": "oven",
+   "width": 512,
+   "height": 512,
+   "bytes": 35116,
+   "states": [
+    "dial"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "tin-cupcake-6",
+   "file": "tins-liners/svg/tin-cupcake-6.svg",
+   "format": "svg",
+   "type": "tins-liners",
+   "width": 512,
+   "height": 384,
+   "bytes": 1912,
+   "states": []
+  },
+  {
+   "id": "tin-cupcake-6",
+   "file": "tins-liners/png@2x/tin-cupcake-6.png",
+   "format": "png@2x",
+   "type": "tins-liners",
+   "width": 1024,
+   "height": 768,
+   "bytes": 46296,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "tray-cookie",
+   "file": "tins-liners/svg/tray-cookie.svg",
+   "format": "svg",
+   "type": "tins-liners",
+   "width": 512,
+   "height": 384,
+   "bytes": 463,
+   "states": []
+  },
+  {
+   "id": "tray-cookie",
+   "file": "tins-liners/png@2x/tray-cookie.png",
+   "format": "png@2x",
+   "type": "tins-liners",
+   "width": 1024,
+   "height": 768,
+   "bytes": 16752,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "liner-dots",
+   "file": "tins-liners/svg/liner-dots.svg",
+   "format": "svg",
+   "type": "liner",
+   "width": 256,
+   "height": 256,
+   "bytes": 1801,
+   "states": [
+    "dots"
+   ]
+  },
+  {
+   "id": "liner-dots",
+   "file": "tins-liners/png@2x/liner-dots.png",
+   "format": "png@2x",
+   "type": "liner",
+   "width": 512,
+   "height": 512,
+   "bytes": 25660,
+   "states": [
+    "dots"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "liner-stripes",
+   "file": "tins-liners/svg/liner-stripes.svg",
+   "format": "svg",
+   "type": "liner",
+   "width": 256,
+   "height": 256,
+   "bytes": 1032,
+   "states": [
+    "stripes"
+   ]
+  },
+  {
+   "id": "liner-stripes",
+   "file": "tins-liners/png@2x/liner-stripes.png",
+   "format": "png@2x",
+   "type": "liner",
+   "width": 512,
+   "height": 512,
+   "bytes": 20557,
+   "states": [
+    "stripes"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "liner-hearts",
+   "file": "tins-liners/svg/liner-hearts.svg",
+   "format": "svg",
+   "type": "liner",
+   "width": 256,
+   "height": 256,
+   "bytes": 1659,
+   "states": [
+    "hearts"
+   ]
+  },
+  {
+   "id": "liner-hearts",
+   "file": "tins-liners/png@2x/liner-hearts.png",
+   "format": "png@2x",
+   "type": "liner",
+   "width": 512,
+   "height": 512,
+   "bytes": 23495,
+   "states": [
+    "hearts"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "liner-stars",
+   "file": "tins-liners/svg/liner-stars.svg",
+   "format": "svg",
+   "type": "liner",
+   "width": 256,
+   "height": 256,
+   "bytes": 3045,
+   "states": [
+    "stars"
+   ]
+  },
+  {
+   "id": "liner-stars",
+   "file": "tins-liners/png@2x/liner-stars.png",
+   "format": "png@2x",
+   "type": "liner",
+   "width": 512,
+   "height": 512,
+   "bytes": 26036,
+   "states": [
+    "stars"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "liner-gingham",
+   "file": "tins-liners/svg/liner-gingham.svg",
+   "format": "svg",
+   "type": "liner",
+   "width": 256,
+   "height": 256,
+   "bytes": 1167,
+   "states": [
+    "gingham"
+   ]
+  },
+  {
+   "id": "liner-gingham",
+   "file": "tins-liners/png@2x/liner-gingham.png",
+   "format": "png@2x",
+   "type": "liner",
+   "width": 512,
+   "height": 512,
+   "bytes": 23005,
+   "states": [
+    "gingham"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "liner-gold-foil",
+   "file": "tins-liners/svg/liner-gold-foil.svg",
+   "format": "svg",
+   "type": "liner",
+   "width": 256,
+   "height": 256,
+   "bytes": 1055,
+   "states": [
+    "gold-foil"
+   ]
+  },
+  {
+   "id": "liner-gold-foil",
+   "file": "tins-liners/png@2x/liner-gold-foil.png",
+   "format": "png@2x",
+   "type": "liner",
+   "width": 512,
+   "height": 512,
+   "bytes": 26566,
+   "states": [
+    "gold-foil"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-vanilla",
+   "file": "batter/svg/batter-swatch-vanilla.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "vanilla"
+   ]
+  },
+  {
+   "id": "batter-swatch-vanilla",
+   "file": "batter/png@2x/batter-swatch-vanilla.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 18840,
+   "states": [
+    "vanilla"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-vanilla-mixed",
+   "file": "batter/svg/batter-cupcake-vanilla-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-vanilla-mixed",
+   "file": "batter/png@2x/batter-cupcake-vanilla-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 25517,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-vanilla-lumpy",
+   "file": "batter/svg/batter-cupcake-vanilla-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-vanilla-lumpy",
+   "file": "batter/png@2x/batter-cupcake-vanilla-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 29535,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-vanilla-mixed",
+   "file": "batter/svg/batter-cookie-vanilla-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 802,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-vanilla-mixed",
+   "file": "batter/png@2x/batter-cookie-vanilla-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 20615,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-strawberry",
+   "file": "batter/svg/batter-swatch-strawberry.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "strawberry"
+   ]
+  },
+  {
+   "id": "batter-swatch-strawberry",
+   "file": "batter/png@2x/batter-swatch-strawberry.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 18839,
+   "states": [
+    "strawberry"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-strawberry-mixed",
+   "file": "batter/svg/batter-cupcake-strawberry-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-strawberry-mixed",
+   "file": "batter/png@2x/batter-cupcake-strawberry-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 25375,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-strawberry-lumpy",
+   "file": "batter/svg/batter-cupcake-strawberry-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-strawberry-lumpy",
+   "file": "batter/png@2x/batter-cupcake-strawberry-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 29421,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-strawberry-mixed",
+   "file": "batter/svg/batter-cookie-strawberry-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 802,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-strawberry-mixed",
+   "file": "batter/png@2x/batter-cookie-strawberry-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 20511,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-chocolate",
+   "file": "batter/svg/batter-swatch-chocolate.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "chocolate"
+   ]
+  },
+  {
+   "id": "batter-swatch-chocolate",
+   "file": "batter/png@2x/batter-swatch-chocolate.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 17975,
+   "states": [
+    "chocolate"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-chocolate-mixed",
+   "file": "batter/svg/batter-cupcake-chocolate-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-chocolate-mixed",
+   "file": "batter/png@2x/batter-cupcake-chocolate-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 24850,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-chocolate-lumpy",
+   "file": "batter/svg/batter-cupcake-chocolate-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-chocolate-lumpy",
+   "file": "batter/png@2x/batter-cupcake-chocolate-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 28784,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-chocolate-mixed",
+   "file": "batter/svg/batter-cookie-chocolate-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 889,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-chocolate-mixed",
+   "file": "batter/png@2x/batter-cookie-chocolate-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 17354,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-matcha",
+   "file": "batter/svg/batter-swatch-matcha.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "matcha"
+   ]
+  },
+  {
+   "id": "batter-swatch-matcha",
+   "file": "batter/png@2x/batter-swatch-matcha.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 18816,
+   "states": [
+    "matcha"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-matcha-mixed",
+   "file": "batter/svg/batter-cupcake-matcha-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-matcha-mixed",
+   "file": "batter/png@2x/batter-cupcake-matcha-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 25282,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-matcha-lumpy",
+   "file": "batter/svg/batter-cupcake-matcha-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-matcha-lumpy",
+   "file": "batter/png@2x/batter-cupcake-matcha-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 29421,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-matcha-mixed",
+   "file": "batter/svg/batter-cookie-matcha-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 802,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-matcha-mixed",
+   "file": "batter/png@2x/batter-cookie-matcha-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 20493,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-blueberry",
+   "file": "batter/svg/batter-swatch-blueberry.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "blueberry"
+   ]
+  },
+  {
+   "id": "batter-swatch-blueberry",
+   "file": "batter/png@2x/batter-swatch-blueberry.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 18771,
+   "states": [
+    "blueberry"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-blueberry-mixed",
+   "file": "batter/svg/batter-cupcake-blueberry-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-blueberry-mixed",
+   "file": "batter/png@2x/batter-cupcake-blueberry-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 25261,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-blueberry-lumpy",
+   "file": "batter/svg/batter-cupcake-blueberry-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-blueberry-lumpy",
+   "file": "batter/png@2x/batter-cupcake-blueberry-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 29338,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-blueberry-mixed",
+   "file": "batter/svg/batter-cookie-blueberry-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 802,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-blueberry-mixed",
+   "file": "batter/png@2x/batter-cookie-blueberry-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 20622,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-lemon",
+   "file": "batter/svg/batter-swatch-lemon.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "lemon"
+   ]
+  },
+  {
+   "id": "batter-swatch-lemon",
+   "file": "batter/png@2x/batter-swatch-lemon.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 18663,
+   "states": [
+    "lemon"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-lemon-mixed",
+   "file": "batter/svg/batter-cupcake-lemon-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-lemon-mixed",
+   "file": "batter/png@2x/batter-cupcake-lemon-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 25421,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-lemon-lumpy",
+   "file": "batter/svg/batter-cupcake-lemon-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-lemon-lumpy",
+   "file": "batter/png@2x/batter-cupcake-lemon-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 29449,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-lemon-mixed",
+   "file": "batter/svg/batter-cookie-lemon-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 802,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-lemon-mixed",
+   "file": "batter/png@2x/batter-cookie-lemon-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 20469,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-lavender",
+   "file": "batter/svg/batter-swatch-lavender.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 514,
+   "states": [
+    "lavender"
+   ]
+  },
+  {
+   "id": "batter-swatch-lavender",
+   "file": "batter/png@2x/batter-swatch-lavender.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 18905,
+   "states": [
+    "lavender"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-lavender-mixed",
+   "file": "batter/svg/batter-cupcake-lavender-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-lavender-mixed",
+   "file": "batter/png@2x/batter-cupcake-lavender-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 25319,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-lavender-lumpy",
+   "file": "batter/svg/batter-cupcake-lavender-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1302,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-lavender-lumpy",
+   "file": "batter/png@2x/batter-cupcake-lavender-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 29529,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-lavender-mixed",
+   "file": "batter/svg/batter-cookie-lavender-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 802,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-lavender-mixed",
+   "file": "batter/png@2x/batter-cookie-lavender-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 20810,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-swatch-rainbow",
+   "file": "batter/svg/batter-swatch-rainbow.svg",
+   "format": "svg",
+   "type": "batter-swatch",
+   "width": 256,
+   "height": 256,
+   "bytes": 833,
+   "states": [
+    "rainbow"
+   ]
+  },
+  {
+   "id": "batter-swatch-rainbow",
+   "file": "batter/png@2x/batter-swatch-rainbow.png",
+   "format": "png@2x",
+   "type": "batter-swatch",
+   "width": 512,
+   "height": 512,
+   "bytes": 19615,
+   "states": [
+    "rainbow"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-rainbow-mixed",
+   "file": "batter/svg/batter-cupcake-rainbow-mixed.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1349,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cupcake-rainbow-mixed",
+   "file": "batter/png@2x/batter-cupcake-rainbow-mixed.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 26685,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cupcake-rainbow-lumpy",
+   "file": "batter/svg/batter-cupcake-rainbow-lumpy.svg",
+   "format": "svg",
+   "type": "batter-fill",
+   "width": 256,
+   "height": 256,
+   "bytes": 1621,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-cupcake-rainbow-lumpy",
+   "file": "batter/png@2x/batter-cupcake-rainbow-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-fill",
+   "width": 512,
+   "height": 512,
+   "bytes": 30016,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-cookie-rainbow-mixed",
+   "file": "batter/svg/batter-cookie-rainbow-mixed.svg",
+   "format": "svg",
+   "type": "dough",
+   "width": 256,
+   "height": 256,
+   "bytes": 1121,
+   "states": [
+    "mixed"
+   ]
+  },
+  {
+   "id": "batter-cookie-rainbow-mixed",
+   "file": "batter/png@2x/batter-cookie-rainbow-mixed.png",
+   "format": "png@2x",
+   "type": "dough",
+   "width": 512,
+   "height": 512,
+   "bytes": 22785,
+   "states": [
+    "mixed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-texture-lumpy",
+   "file": "batter/svg/batter-texture-lumpy.svg",
+   "format": "svg",
+   "type": "batter-texture",
+   "width": 256,
+   "height": 256,
+   "bytes": 1451,
+   "states": [
+    "lumpy"
+   ]
+  },
+  {
+   "id": "batter-texture-lumpy",
+   "file": "batter/png@2x/batter-texture-lumpy.png",
+   "format": "png@2x",
+   "type": "batter-texture",
+   "width": 512,
+   "height": 512,
+   "bytes": 29567,
+   "states": [
+    "lumpy"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "batter-texture-smooth",
+   "file": "batter/svg/batter-texture-smooth.svg",
+   "format": "svg",
+   "type": "batter-texture",
+   "width": 256,
+   "height": 256,
+   "bytes": 1030,
+   "states": [
+    "smooth"
+   ]
+  },
+  {
+   "id": "batter-texture-smooth",
+   "file": "batter/png@2x/batter-texture-smooth.png",
+   "format": "png@2x",
+   "type": "batter-texture",
+   "width": 512,
+   "height": 512,
+   "bytes": 25517,
+   "states": [
+    "smooth"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-vanilla-raw",
+   "file": "baked/svg/cupcake-vanilla-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-vanilla-raw",
+   "file": "baked/png@2x/cupcake-vanilla-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16727,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-vanilla-baked",
+   "file": "baked/svg/cupcake-vanilla-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-vanilla-baked",
+   "file": "baked/png@2x/cupcake-vanilla-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18649,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-strawberry-raw",
+   "file": "baked/svg/cupcake-strawberry-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-strawberry-raw",
+   "file": "baked/png@2x/cupcake-strawberry-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16289,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-strawberry-baked",
+   "file": "baked/svg/cupcake-strawberry-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-strawberry-baked",
+   "file": "baked/png@2x/cupcake-strawberry-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18569,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-chocolate-raw",
+   "file": "baked/svg/cupcake-chocolate-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-chocolate-raw",
+   "file": "baked/png@2x/cupcake-chocolate-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16674,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-chocolate-baked",
+   "file": "baked/svg/cupcake-chocolate-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-chocolate-baked",
+   "file": "baked/png@2x/cupcake-chocolate-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18198,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-matcha-raw",
+   "file": "baked/svg/cupcake-matcha-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-matcha-raw",
+   "file": "baked/png@2x/cupcake-matcha-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16731,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-matcha-baked",
+   "file": "baked/svg/cupcake-matcha-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-matcha-baked",
+   "file": "baked/png@2x/cupcake-matcha-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18579,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-blueberry-raw",
+   "file": "baked/svg/cupcake-blueberry-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-blueberry-raw",
+   "file": "baked/png@2x/cupcake-blueberry-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16739,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-blueberry-baked",
+   "file": "baked/svg/cupcake-blueberry-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-blueberry-baked",
+   "file": "baked/png@2x/cupcake-blueberry-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18564,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-lemon-raw",
+   "file": "baked/svg/cupcake-lemon-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-lemon-raw",
+   "file": "baked/png@2x/cupcake-lemon-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16703,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-lemon-baked",
+   "file": "baked/svg/cupcake-lemon-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-lemon-baked",
+   "file": "baked/png@2x/cupcake-lemon-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18622,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-lavender-raw",
+   "file": "baked/svg/cupcake-lavender-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 786,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-lavender-raw",
+   "file": "baked/png@2x/cupcake-lavender-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 16736,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-lavender-baked",
+   "file": "baked/svg/cupcake-lavender-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 672,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-lavender-baked",
+   "file": "baked/png@2x/cupcake-lavender-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 18593,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-rainbow-raw",
+   "file": "baked/svg/cupcake-rainbow-raw.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 1105,
+   "states": [
+    "raw"
+   ]
+  },
+  {
+   "id": "cupcake-rainbow-raw",
+   "file": "baked/png@2x/cupcake-rainbow-raw.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 17267,
+   "states": [
+    "raw"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cupcake-rainbow-baked",
+   "file": "baked/svg/cupcake-rainbow-baked.svg",
+   "format": "svg",
+   "type": "cupcake",
+   "width": 256,
+   "height": 256,
+   "bytes": 991,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cupcake-rainbow-baked",
+   "file": "baked/png@2x/cupcake-rainbow-baked.png",
+   "format": "png@2x",
+   "type": "cupcake",
+   "width": 512,
+   "height": 512,
+   "bytes": 19433,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cookie-heart-baked",
+   "file": "baked/svg/cookie-heart-baked.svg",
+   "format": "svg",
+   "type": "cookie",
+   "width": 256,
+   "height": 256,
+   "bytes": 582,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cookie-heart-baked",
+   "file": "baked/png@2x/cookie-heart-baked.png",
+   "format": "png@2x",
+   "type": "cookie",
+   "width": 512,
+   "height": 512,
+   "bytes": 15597,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cookie-star-baked",
+   "file": "baked/svg/cookie-star-baked.svg",
+   "format": "svg",
+   "type": "cookie",
+   "width": 256,
+   "height": 256,
+   "bytes": 858,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cookie-star-baked",
+   "file": "baked/png@2x/cookie-star-baked.png",
+   "format": "png@2x",
+   "type": "cookie",
+   "width": 512,
+   "height": 512,
+   "bytes": 17829,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cookie-bunny-baked",
+   "file": "baked/svg/cookie-bunny-baked.svg",
+   "format": "svg",
+   "type": "cookie",
+   "width": 256,
+   "height": 256,
+   "bytes": 937,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cookie-bunny-baked",
+   "file": "baked/png@2x/cookie-bunny-baked.png",
+   "format": "png@2x",
+   "type": "cookie",
+   "width": 512,
+   "height": 512,
+   "bytes": 21779,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "cookie-flower-baked",
+   "file": "baked/svg/cookie-flower-baked.svg",
+   "format": "svg",
+   "type": "cookie",
+   "width": 256,
+   "height": 256,
+   "bytes": 1337,
+   "states": [
+    "baked"
+   ]
+  },
+  {
+   "id": "cookie-flower-baked",
+   "file": "baked/png@2x/cookie-flower-baked.png",
+   "format": "png@2x",
+   "type": "cookie",
+   "width": 512,
+   "height": 512,
+   "bytes": 20040,
+   "states": [
+    "baked"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-vanilla-stroke",
+   "file": "decorations/svg/frosting-vanilla-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "vanilla"
+   ]
+  },
+  {
+   "id": "frosting-vanilla-stroke",
+   "file": "decorations/png@2x/frosting-vanilla-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 29874,
+   "states": [
+    "vanilla"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-strawberry-stroke",
+   "file": "decorations/svg/frosting-strawberry-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "strawberry"
+   ]
+  },
+  {
+   "id": "frosting-strawberry-stroke",
+   "file": "decorations/png@2x/frosting-strawberry-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 29682,
+   "states": [
+    "strawberry"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-chocolate-stroke",
+   "file": "decorations/svg/frosting-chocolate-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "chocolate"
+   ]
+  },
+  {
+   "id": "frosting-chocolate-stroke",
+   "file": "decorations/png@2x/frosting-chocolate-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 29189,
+   "states": [
+    "chocolate"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-matcha-stroke",
+   "file": "decorations/svg/frosting-matcha-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "matcha"
+   ]
+  },
+  {
+   "id": "frosting-matcha-stroke",
+   "file": "decorations/png@2x/frosting-matcha-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 29788,
+   "states": [
+    "matcha"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-blueberry-stroke",
+   "file": "decorations/svg/frosting-blueberry-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "blueberry"
+   ]
+  },
+  {
+   "id": "frosting-blueberry-stroke",
+   "file": "decorations/png@2x/frosting-blueberry-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 29740,
+   "states": [
+    "blueberry"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-lemon-stroke",
+   "file": "decorations/svg/frosting-lemon-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "lemon"
+   ]
+  },
+  {
+   "id": "frosting-lemon-stroke",
+   "file": "decorations/png@2x/frosting-lemon-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 29875,
+   "states": [
+    "lemon"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-lavender-stroke",
+   "file": "decorations/svg/frosting-lavender-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3204,
+   "states": [
+    "lavender"
+   ]
+  },
+  {
+   "id": "frosting-lavender-stroke",
+   "file": "decorations/png@2x/frosting-lavender-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 30182,
+   "states": [
+    "lavender"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "frosting-rainbow-stroke",
+   "file": "decorations/svg/frosting-rainbow-stroke.svg",
+   "format": "svg",
+   "type": "frosting",
+   "width": 512,
+   "height": 128,
+   "bytes": 3523,
+   "states": [
+    "rainbow"
+   ]
+  },
+  {
+   "id": "frosting-rainbow-stroke",
+   "file": "decorations/png@2x/frosting-rainbow-stroke.png",
+   "format": "png@2x",
+   "type": "frosting",
+   "width": 1024,
+   "height": 256,
+   "bytes": 46362,
+   "states": [
+    "rainbow"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "sprinkles-jimmies",
+   "file": "decorations/svg/sprinkles-jimmies.svg",
+   "format": "svg",
+   "type": "sprinkles",
+   "width": 128,
+   "height": 128,
+   "bytes": 1569,
+   "states": []
+  },
+  {
+   "id": "sprinkles-jimmies",
+   "file": "decorations/png@2x/sprinkles-jimmies.png",
+   "format": "png@2x",
+   "type": "sprinkles",
+   "width": 256,
+   "height": 256,
+   "bytes": 13202,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sprinkles-nonpareils",
+   "file": "decorations/svg/sprinkles-nonpareils.svg",
+   "format": "svg",
+   "type": "sprinkles",
+   "width": 128,
+   "height": 128,
+   "bytes": 1288,
+   "states": []
+  },
+  {
+   "id": "sprinkles-nonpareils",
+   "file": "decorations/png@2x/sprinkles-nonpareils.png",
+   "format": "png@2x",
+   "type": "sprinkles",
+   "width": 256,
+   "height": 256,
+   "bytes": 13394,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sprinkles-hearts",
+   "file": "decorations/svg/sprinkles-hearts.svg",
+   "format": "svg",
+   "type": "sprinkles",
+   "width": 128,
+   "height": 128,
+   "bytes": 1634,
+   "states": []
+  },
+  {
+   "id": "sprinkles-hearts",
+   "file": "decorations/png@2x/sprinkles-hearts.png",
+   "format": "png@2x",
+   "type": "sprinkles",
+   "width": 256,
+   "height": 256,
+   "bytes": 12137,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sprinkles-stars",
+   "file": "decorations/svg/sprinkles-stars.svg",
+   "format": "svg",
+   "type": "sprinkles",
+   "width": 128,
+   "height": 128,
+   "bytes": 2352,
+   "states": []
+  },
+  {
+   "id": "sprinkles-stars",
+   "file": "decorations/png@2x/sprinkles-stars.png",
+   "format": "png@2x",
+   "type": "sprinkles",
+   "width": 256,
+   "height": 256,
+   "bytes": 15177,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-cherry",
+   "file": "decorations/svg/topper-cherry.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 624,
+   "states": []
+  },
+  {
+   "id": "topper-cherry",
+   "file": "decorations/png@2x/topper-cherry.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 16174,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-strawberry",
+   "file": "decorations/svg/topper-strawberry.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 866,
+   "states": []
+  },
+  {
+   "id": "topper-strawberry",
+   "file": "decorations/png@2x/topper-strawberry.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 20533,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-blueberry",
+   "file": "decorations/svg/topper-blueberry.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 577,
+   "states": []
+  },
+  {
+   "id": "topper-blueberry",
+   "file": "decorations/png@2x/topper-blueberry.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 18559,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-choc-piece",
+   "file": "decorations/svg/topper-choc-piece.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 1213,
+   "states": []
+  },
+  {
+   "id": "topper-choc-piece",
+   "file": "decorations/png@2x/topper-choc-piece.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 8861,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-heart",
+   "file": "decorations/svg/topper-heart.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 369,
+   "states": []
+  },
+  {
+   "id": "topper-heart",
+   "file": "decorations/png@2x/topper-heart.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 16657,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-star",
+   "file": "decorations/svg/topper-star.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 494,
+   "states": []
+  },
+  {
+   "id": "topper-star",
+   "file": "decorations/png@2x/topper-star.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 18170,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "topper-candle",
+   "file": "decorations/svg/topper-candle.svg",
+   "format": "svg",
+   "type": "decorations",
+   "width": 256,
+   "height": 256,
+   "bytes": 720,
+   "states": []
+  },
+  {
+   "id": "topper-candle",
+   "file": "decorations/png@2x/topper-candle.png",
+   "format": "png@2x",
+   "type": "decorations",
+   "width": 512,
+   "height": 512,
+   "bytes": 13274,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "plate-round-pink",
+   "file": "plates/svg/plate-round-pink.svg",
+   "format": "svg",
+   "type": "plate",
+   "width": 512,
+   "height": 512,
+   "bytes": 511,
+   "states": [
+    "round-pink"
+   ]
+  },
+  {
+   "id": "plate-round-pink",
+   "file": "plates/png@2x/plate-round-pink.png",
+   "format": "png@2x",
+   "type": "plate",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 74504,
+   "states": [
+    "round-pink"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "plate-scalloped-mint",
+   "file": "plates/svg/plate-scalloped-mint.svg",
+   "format": "svg",
+   "type": "plate",
+   "width": 512,
+   "height": 512,
+   "bytes": 3401,
+   "states": [
+    "scalloped-mint"
+   ]
+  },
+  {
+   "id": "plate-scalloped-mint",
+   "file": "plates/png@2x/plate-scalloped-mint.png",
+   "format": "png@2x",
+   "type": "plate",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 83450,
+   "states": [
+    "scalloped-mint"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "plate-heart",
+   "file": "plates/svg/plate-heart.svg",
+   "format": "svg",
+   "type": "plate",
+   "width": 512,
+   "height": 512,
+   "bytes": 673,
+   "states": [
+    "heart"
+   ]
+  },
+  {
+   "id": "plate-heart",
+   "file": "plates/png@2x/plate-heart.png",
+   "format": "png@2x",
+   "type": "plate",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 68623,
+   "states": [
+    "heart"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "plate-cloud",
+   "file": "plates/svg/plate-cloud.svg",
+   "format": "svg",
+   "type": "plate",
+   "width": 512,
+   "height": 512,
+   "bytes": 1559,
+   "states": [
+    "cloud"
+   ]
+  },
+  {
+   "id": "plate-cloud",
+   "file": "plates/png@2x/plate-cloud.png",
+   "format": "png@2x",
+   "type": "plate",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 56020,
+   "states": [
+    "cloud"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "plate-star",
+   "file": "plates/svg/plate-star.svg",
+   "format": "svg",
+   "type": "plate",
+   "width": 512,
+   "height": 512,
+   "bytes": 1151,
+   "states": [
+    "star"
+   ]
+  },
+  {
+   "id": "plate-star",
+   "file": "plates/png@2x/plate-star.png",
+   "format": "png@2x",
+   "type": "plate",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 69701,
+   "states": [
+    "star"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "plate-wooden-board",
+   "file": "plates/svg/plate-wooden-board.svg",
+   "format": "svg",
+   "type": "plate",
+   "width": 512,
+   "height": 512,
+   "bytes": 610,
+   "states": [
+    "wooden-board"
+   ]
+  },
+  {
+   "id": "plate-wooden-board",
+   "file": "plates/png@2x/plate-wooden-board.png",
+   "format": "png@2x",
+   "type": "plate",
+   "width": 1024,
+   "height": 1024,
+   "bytes": 27730,
+   "states": [
+    "wooden-board"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-bento-open",
+   "file": "carriers/svg/carrier-bento-open.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 930,
+   "states": [
+    "open"
+   ]
+  },
+  {
+   "id": "carrier-bento-open",
+   "file": "carriers/png@2x/carrier-bento-open.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 43564,
+   "states": [
+    "open"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-bento-closed",
+   "file": "carriers/svg/carrier-bento-closed.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 795,
+   "states": [
+    "closed"
+   ]
+  },
+  {
+   "id": "carrier-bento-closed",
+   "file": "carriers/png@2x/carrier-bento-closed.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 33565,
+   "states": [
+    "closed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-basket-open",
+   "file": "carriers/svg/carrier-basket-open.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 1743,
+   "states": [
+    "open"
+   ]
+  },
+  {
+   "id": "carrier-basket-open",
+   "file": "carriers/png@2x/carrier-basket-open.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 79010,
+   "states": [
+    "open"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-basket-closed",
+   "file": "carriers/svg/carrier-basket-closed.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 1664,
+   "states": [
+    "closed"
+   ]
+  },
+  {
+   "id": "carrier-basket-closed",
+   "file": "carriers/png@2x/carrier-basket-closed.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 73310,
+   "states": [
+    "closed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-cookie-tin-open",
+   "file": "carriers/svg/carrier-cookie-tin-open.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 1701,
+   "states": [
+    "open"
+   ]
+  },
+  {
+   "id": "carrier-cookie-tin-open",
+   "file": "carriers/png@2x/carrier-cookie-tin-open.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 91106,
+   "states": [
+    "open"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-cookie-tin-closed",
+   "file": "carriers/svg/carrier-cookie-tin-closed.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 1460,
+   "states": [
+    "closed"
+   ]
+  },
+  {
+   "id": "carrier-cookie-tin-closed",
+   "file": "carriers/png@2x/carrier-cookie-tin-closed.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 58975,
+   "states": [
+    "closed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-gift-bag-open",
+   "file": "carriers/svg/carrier-gift-bag-open.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 760,
+   "states": [
+    "open"
+   ]
+  },
+  {
+   "id": "carrier-gift-bag-open",
+   "file": "carriers/png@2x/carrier-gift-bag-open.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 47986,
+   "states": [
+    "open"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "carrier-gift-bag-closed",
+   "file": "carriers/svg/carrier-gift-bag-closed.svg",
+   "format": "svg",
+   "type": "carrier",
+   "width": 800,
+   "height": 600,
+   "bytes": 931,
+   "states": [
+    "closed"
+   ]
+  },
+  {
+   "id": "carrier-gift-bag-closed",
+   "file": "carriers/png@2x/carrier-gift-bag-closed.png",
+   "format": "png@2x",
+   "type": "carrier",
+   "width": 1600,
+   "height": 1200,
+   "bytes": 54367,
+   "states": [
+    "closed"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "sticker-heart-pink",
+   "file": "stickers/svg/sticker-heart-pink.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 711,
+   "states": []
+  },
+  {
+   "id": "sticker-heart-pink",
+   "file": "stickers/png@2x/sticker-heart-pink.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 18252,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-heart-coral",
+   "file": "stickers/svg/sticker-heart-coral.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 711,
+   "states": []
+  },
+  {
+   "id": "sticker-heart-coral",
+   "file": "stickers/png@2x/sticker-heart-coral.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 18041,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-heart-lavender",
+   "file": "stickers/svg/sticker-heart-lavender.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 711,
+   "states": []
+  },
+  {
+   "id": "sticker-heart-lavender",
+   "file": "stickers/png@2x/sticker-heart-lavender.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 18285,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-star-lemon",
+   "file": "stickers/svg/sticker-star-lemon.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1143,
+   "states": []
+  },
+  {
+   "id": "sticker-star-lemon",
+   "file": "stickers/png@2x/sticker-star-lemon.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 21152,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-star-sky",
+   "file": "stickers/svg/sticker-star-sky.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1143,
+   "states": []
+  },
+  {
+   "id": "sticker-star-sky",
+   "file": "stickers/png@2x/sticker-star-sky.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 20973,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-star-mint",
+   "file": "stickers/svg/sticker-star-mint.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1143,
+   "states": []
+  },
+  {
+   "id": "sticker-star-mint",
+   "file": "stickers/png@2x/sticker-star-mint.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 21157,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-fruit-strawberry",
+   "file": "stickers/svg/sticker-fruit-strawberry.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1034,
+   "states": []
+  },
+  {
+   "id": "sticker-fruit-strawberry",
+   "file": "stickers/png@2x/sticker-fruit-strawberry.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 20750,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-fruit-cherry",
+   "file": "stickers/svg/sticker-fruit-cherry.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1052,
+   "states": []
+  },
+  {
+   "id": "sticker-fruit-cherry",
+   "file": "stickers/png@2x/sticker-fruit-cherry.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 18597,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-fruit-lemon",
+   "file": "stickers/svg/sticker-fruit-lemon.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 761,
+   "states": []
+  },
+  {
+   "id": "sticker-fruit-lemon",
+   "file": "stickers/png@2x/sticker-fruit-lemon.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 26053,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-fruit-apple",
+   "file": "stickers/svg/sticker-fruit-apple.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1062,
+   "states": []
+  },
+  {
+   "id": "sticker-fruit-apple",
+   "file": "stickers/png@2x/sticker-fruit-apple.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 21308,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-flower-pink",
+   "file": "stickers/svg/sticker-flower-pink.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 2433,
+   "states": []
+  },
+  {
+   "id": "sticker-flower-pink",
+   "file": "stickers/png@2x/sticker-flower-pink.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 27184,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-flower-mint",
+   "file": "stickers/svg/sticker-flower-mint.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 2433,
+   "states": []
+  },
+  {
+   "id": "sticker-flower-mint",
+   "file": "stickers/png@2x/sticker-flower-mint.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 27189,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-flower-sky",
+   "file": "stickers/svg/sticker-flower-sky.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 2433,
+   "states": []
+  },
+  {
+   "id": "sticker-flower-sky",
+   "file": "stickers/png@2x/sticker-flower-sky.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 27073,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-cloud-white",
+   "file": "stickers/svg/sticker-cloud-white.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 2042,
+   "states": []
+  },
+  {
+   "id": "sticker-cloud-white",
+   "file": "stickers/png@2x/sticker-cloud-white.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 18157,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-cloud-sky",
+   "file": "stickers/svg/sticker-cloud-sky.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1697,
+   "states": []
+  },
+  {
+   "id": "sticker-cloud-sky",
+   "file": "stickers/png@2x/sticker-cloud-sky.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 16949,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-rainbow-classic",
+   "file": "stickers/svg/sticker-rainbow-classic.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 2182,
+   "states": []
+  },
+  {
+   "id": "sticker-rainbow-classic",
+   "file": "stickers/png@2x/sticker-rainbow-classic.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 24203,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-rainbow-pastel",
+   "file": "stickers/svg/sticker-rainbow-pastel.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 2182,
+   "states": []
+  },
+  {
+   "id": "sticker-rainbow-pastel",
+   "file": "stickers/png@2x/sticker-rainbow-pastel.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 24121,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-sweet-lollipop",
+   "file": "stickers/svg/sticker-sweet-lollipop.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1138,
+   "states": []
+  },
+  {
+   "id": "sticker-sweet-lollipop",
+   "file": "stickers/png@2x/sticker-sweet-lollipop.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 23679,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-sweet-candy",
+   "file": "stickers/svg/sticker-sweet-candy.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 973,
+   "states": []
+  },
+  {
+   "id": "sticker-sweet-candy",
+   "file": "stickers/png@2x/sticker-sweet-candy.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 17925,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-sweet-donut",
+   "file": "stickers/svg/sticker-sweet-donut.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1138,
+   "states": []
+  },
+  {
+   "id": "sticker-sweet-donut",
+   "file": "stickers/png@2x/sticker-sweet-donut.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 30741,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "sticker-sweet-macaron",
+   "file": "stickers/svg/sticker-sweet-macaron.svg",
+   "format": "svg",
+   "type": "sticker",
+   "width": 160,
+   "height": 160,
+   "bytes": 1623,
+   "states": []
+  },
+  {
+   "id": "sticker-sweet-macaron",
+   "file": "stickers/png@2x/sticker-sweet-macaron.png",
+   "format": "png@2x",
+   "type": "sticker",
+   "width": 320,
+   "height": 320,
+   "bytes": 15292,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-play",
+   "file": "ui/svg/btn-play.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 200,
+   "height": 200,
+   "bytes": 524,
+   "states": []
+  },
+  {
+   "id": "btn-play",
+   "file": "ui/png@2x/btn-play.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 400,
+   "height": 400,
+   "bytes": 19193,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-next",
+   "file": "ui/svg/btn-next.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 498,
+   "states": []
+  },
+  {
+   "id": "btn-next",
+   "file": "ui/png@2x/btn-next.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 9353,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-back",
+   "file": "ui/svg/btn-back.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 498,
+   "states": []
+  },
+  {
+   "id": "btn-back",
+   "file": "ui/png@2x/btn-back.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 9350,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-speaker",
+   "file": "ui/svg/btn-speaker.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 632,
+   "states": []
+  },
+  {
+   "id": "btn-speaker",
+   "file": "ui/png@2x/btn-speaker.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 10695,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-undo",
+   "file": "ui/svg/btn-undo.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 747,
+   "states": []
+  },
+  {
+   "id": "btn-undo",
+   "file": "ui/png@2x/btn-undo.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 11817,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-clear",
+   "file": "ui/svg/btn-clear.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 757,
+   "states": []
+  },
+  {
+   "id": "btn-clear",
+   "file": "ui/png@2x/btn-clear.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 11102,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-save",
+   "file": "ui/svg/btn-save.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 701,
+   "states": []
+  },
+  {
+   "id": "btn-save",
+   "file": "ui/png@2x/btn-save.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 10520,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-play-again",
+   "file": "ui/svg/btn-play-again.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 739,
+   "states": []
+  },
+  {
+   "id": "btn-play-again",
+   "file": "ui/png@2x/btn-play-again.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 13973,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-gallery",
+   "file": "ui/svg/btn-gallery.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 749,
+   "states": []
+  },
+  {
+   "id": "btn-gallery",
+   "file": "ui/png@2x/btn-gallery.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 10008,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-gear",
+   "file": "ui/svg/btn-gear.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 928,
+   "states": []
+  },
+  {
+   "id": "btn-gear",
+   "file": "ui/png@2x/btn-gear.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 14451,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "btn-copy-to-all",
+   "file": "ui/svg/btn-copy-to-all.svg",
+   "format": "svg",
+   "type": "ui-button",
+   "width": 96,
+   "height": 96,
+   "bytes": 857,
+   "states": []
+  },
+  {
+   "id": "btn-copy-to-all",
+   "file": "ui/png@2x/btn-copy-to-all.png",
+   "format": "png@2x",
+   "type": "ui-button",
+   "width": 192,
+   "height": 192,
+   "bytes": 9246,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-01-choose",
+   "file": "ui/svg/trail-01-choose.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 747,
+   "states": []
+  },
+  {
+   "id": "trail-01-choose",
+   "file": "ui/png@2x/trail-01-choose.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 10965,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-02-ingredients",
+   "file": "ui/svg/trail-02-ingredients.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 750,
+   "states": []
+  },
+  {
+   "id": "trail-02-ingredients",
+   "file": "ui/png@2x/trail-02-ingredients.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 10543,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-03-liners",
+   "file": "ui/svg/trail-03-liners.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 758,
+   "states": []
+  },
+  {
+   "id": "trail-03-liners",
+   "file": "ui/png@2x/trail-03-liners.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 10785,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-04-batter",
+   "file": "ui/svg/trail-04-batter.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 768,
+   "states": []
+  },
+  {
+   "id": "trail-04-batter",
+   "file": "ui/png@2x/trail-04-batter.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 13473,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-05-bake",
+   "file": "ui/svg/trail-05-bake.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 790,
+   "states": []
+  },
+  {
+   "id": "trail-05-bake",
+   "file": "ui/png@2x/trail-05-bake.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 11602,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-06-decorate",
+   "file": "ui/svg/trail-06-decorate.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 891,
+   "states": []
+  },
+  {
+   "id": "trail-06-decorate",
+   "file": "ui/png@2x/trail-06-decorate.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 12364,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-07-plate",
+   "file": "ui/svg/trail-07-plate.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 769,
+   "states": []
+  },
+  {
+   "id": "trail-07-plate",
+   "file": "ui/png@2x/trail-07-plate.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 14029,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-08-carrier",
+   "file": "ui/svg/trail-08-carrier.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 879,
+   "states": []
+  },
+  {
+   "id": "trail-08-carrier",
+   "file": "ui/png@2x/trail-08-carrier.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 11803,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-09-decorate-carrier",
+   "file": "ui/svg/trail-09-decorate-carrier.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 885,
+   "states": []
+  },
+  {
+   "id": "trail-09-decorate-carrier",
+   "file": "ui/png@2x/trail-09-decorate-carrier.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 12503,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "trail-done-badge",
+   "file": "ui/svg/trail-done-badge.svg",
+   "format": "svg",
+   "type": "progress-trail",
+   "width": 96,
+   "height": 96,
+   "bytes": 581,
+   "states": [
+    "done"
+   ]
+  },
+  {
+   "id": "trail-done-badge",
+   "file": "ui/png@2x/trail-done-badge.png",
+   "format": "png@2x",
+   "type": "progress-trail",
+   "width": 192,
+   "height": 192,
+   "bytes": 8464,
+   "states": [
+    "done"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "hint-hand",
+   "file": "ui/svg/hint-hand.svg",
+   "format": "svg",
+   "type": "ui-pointer",
+   "width": 128,
+   "height": 128,
+   "bytes": 395,
+   "states": []
+  },
+  {
+   "id": "hint-hand",
+   "file": "ui/png@2x/hint-hand.png",
+   "format": "png@2x",
+   "type": "ui-pointer",
+   "width": 256,
+   "height": 256,
+   "bytes": 8456,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "card-cupcakes",
+   "file": "cards/svg/card-cupcakes.svg",
+   "format": "svg",
+   "type": "treat-card",
+   "width": 240,
+   "height": 240,
+   "bytes": 1220,
+   "states": []
+  },
+  {
+   "id": "card-cupcakes",
+   "file": "cards/png@2x/card-cupcakes.png",
+   "format": "png@2x",
+   "type": "treat-card",
+   "width": 480,
+   "height": 480,
+   "bytes": 30071,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "card-cookies",
+   "file": "cards/svg/card-cookies.svg",
+   "format": "svg",
+   "type": "treat-card",
+   "width": 240,
+   "height": 240,
+   "bytes": 1383,
+   "states": []
+  },
+  {
+   "id": "card-cookies",
+   "file": "cards/png@2x/card-cookies.png",
+   "format": "png@2x",
+   "type": "treat-card",
+   "width": 480,
+   "height": 480,
+   "bytes": 35527,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "fx-sparkles",
+   "file": "effects/svg/fx-sparkles.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 128,
+   "height": 128,
+   "bytes": 835,
+   "states": []
+  },
+  {
+   "id": "fx-sparkles",
+   "file": "effects/png@2x/fx-sparkles.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 256,
+   "height": 256,
+   "bytes": 11851,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "fx-confetti",
+   "file": "effects/svg/fx-confetti.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 128,
+   "height": 128,
+   "bytes": 1528,
+   "states": []
+  },
+  {
+   "id": "fx-confetti",
+   "file": "effects/png@2x/fx-confetti.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 256,
+   "height": 256,
+   "bytes": 12393,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "fx-flour-puff",
+   "file": "effects/svg/fx-flour-puff.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 128,
+   "height": 128,
+   "bytes": 1156,
+   "states": []
+  },
+  {
+   "id": "fx-flour-puff",
+   "file": "effects/png@2x/fx-flour-puff.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 256,
+   "height": 256,
+   "bytes": 10328,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "fx-steam",
+   "file": "effects/svg/fx-steam.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 128,
+   "height": 128,
+   "bytes": 963,
+   "states": []
+  },
+  {
+   "id": "fx-steam",
+   "file": "effects/png@2x/fx-steam.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 256,
+   "height": 256,
+   "bytes": 7424,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "fx-hearts-burst",
+   "file": "effects/svg/fx-hearts-burst.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 128,
+   "height": 128,
+   "bytes": 1270,
+   "states": []
+  },
+  {
+   "id": "fx-hearts-burst",
+   "file": "effects/png@2x/fx-hearts-burst.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 256,
+   "height": 256,
+   "bytes": 11906,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "fx-polaroid-frame",
+   "file": "effects/svg/fx-polaroid-frame.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 400,
+   "height": 480,
+   "bytes": 1108,
+   "states": [
+    "photo-window 40,44,320x328"
+   ]
+  },
+  {
+   "id": "fx-polaroid-frame",
+   "file": "effects/png@2x/fx-polaroid-frame.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 800,
+   "height": 960,
+   "bytes": 17215,
+   "states": [
+    "photo-window 40,44,320x328"
+   ],
+   "scale": 2
+  },
+  {
+   "id": "fx-camera-flash",
+   "file": "effects/svg/fx-camera-flash.svg",
+   "format": "svg",
+   "type": "effect",
+   "width": 256,
+   "height": 256,
+   "bytes": 726,
+   "states": []
+  },
+  {
+   "id": "fx-camera-flash",
+   "file": "effects/png@2x/fx-camera-flash.png",
+   "format": "png@2x",
+   "type": "effect",
+   "width": 512,
+   "height": 512,
+   "bytes": 46432,
+   "states": [],
+   "scale": 2
+  },
+  {
+   "id": "bg-home-1920x1080",
+   "file": "backgrounds/png/bg-home-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 20252,
+   "states": []
+  },
+  {
+   "id": "bg-home-1920x1080",
+   "file": "backgrounds/webp/bg-home-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 20876,
+   "states": []
+  },
+  {
+   "id": "bg-home-2560x1440",
+   "file": "backgrounds/png/bg-home-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 32219,
+   "states": []
+  },
+  {
+   "id": "bg-home-2560x1440",
+   "file": "backgrounds/webp/bg-home-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 30366,
+   "states": []
+  },
+  {
+   "id": "bg-home",
+   "file": "backgrounds/svg/bg-home.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 5724,
+   "states": []
+  },
+  {
+   "id": "bg-kitchen-counter-1920x1080",
+   "file": "backgrounds/png/bg-kitchen-counter-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 17131,
+   "states": []
+  },
+  {
+   "id": "bg-kitchen-counter-1920x1080",
+   "file": "backgrounds/webp/bg-kitchen-counter-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 20128,
+   "states": []
+  },
+  {
+   "id": "bg-kitchen-counter-2560x1440",
+   "file": "backgrounds/png/bg-kitchen-counter-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 26618,
+   "states": []
+  },
+  {
+   "id": "bg-kitchen-counter-2560x1440",
+   "file": "backgrounds/webp/bg-kitchen-counter-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 22748,
+   "states": []
+  },
+  {
+   "id": "bg-kitchen-counter",
+   "file": "backgrounds/svg/bg-kitchen-counter.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 2941,
+   "states": []
+  },
+  {
+   "id": "bg-oven-wall-1920x1080",
+   "file": "backgrounds/png/bg-oven-wall-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 15124,
+   "states": []
+  },
+  {
+   "id": "bg-oven-wall-1920x1080",
+   "file": "backgrounds/webp/bg-oven-wall-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 16028,
+   "states": []
+  },
+  {
+   "id": "bg-oven-wall-2560x1440",
+   "file": "backgrounds/png/bg-oven-wall-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 24240,
+   "states": []
+  },
+  {
+   "id": "bg-oven-wall-2560x1440",
+   "file": "backgrounds/webp/bg-oven-wall-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 19784,
+   "states": []
+  },
+  {
+   "id": "bg-oven-wall",
+   "file": "backgrounds/svg/bg-oven-wall.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 1362,
+   "states": []
+  },
+  {
+   "id": "bg-decorating-table-1920x1080",
+   "file": "backgrounds/png/bg-decorating-table-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 19389,
+   "states": []
+  },
+  {
+   "id": "bg-decorating-table-1920x1080",
+   "file": "backgrounds/webp/bg-decorating-table-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 26502,
+   "states": []
+  },
+  {
+   "id": "bg-decorating-table-2560x1440",
+   "file": "backgrounds/png/bg-decorating-table-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 34440,
+   "states": []
+  },
+  {
+   "id": "bg-decorating-table-2560x1440",
+   "file": "backgrounds/webp/bg-decorating-table-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 40838,
+   "states": []
+  },
+  {
+   "id": "bg-decorating-table",
+   "file": "backgrounds/svg/bg-decorating-table.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 5547,
+   "states": []
+  },
+  {
+   "id": "bg-dining-table-1920x1080",
+   "file": "backgrounds/png/bg-dining-table-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 19881,
+   "states": []
+  },
+  {
+   "id": "bg-dining-table-1920x1080",
+   "file": "backgrounds/webp/bg-dining-table-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 20558,
+   "states": []
+  },
+  {
+   "id": "bg-dining-table-2560x1440",
+   "file": "backgrounds/png/bg-dining-table-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 31164,
+   "states": []
+  },
+  {
+   "id": "bg-dining-table-2560x1440",
+   "file": "backgrounds/webp/bg-dining-table-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 31120,
+   "states": []
+  },
+  {
+   "id": "bg-dining-table",
+   "file": "backgrounds/svg/bg-dining-table.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 3414,
+   "states": []
+  },
+  {
+   "id": "bg-picnic-park-1920x1080",
+   "file": "backgrounds/png/bg-picnic-park-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 22368,
+   "states": []
+  },
+  {
+   "id": "bg-picnic-park-1920x1080",
+   "file": "backgrounds/webp/bg-picnic-park-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 24144,
+   "states": []
+  },
+  {
+   "id": "bg-picnic-park-2560x1440",
+   "file": "backgrounds/png/bg-picnic-park-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 36408,
+   "states": []
+  },
+  {
+   "id": "bg-picnic-park-2560x1440",
+   "file": "backgrounds/webp/bg-picnic-park-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 33902,
+   "states": []
+  },
+  {
+   "id": "bg-picnic-park",
+   "file": "backgrounds/svg/bg-picnic-park.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 7027,
+   "states": []
+  },
+  {
+   "id": "bg-show-off-stage-1920x1080",
+   "file": "backgrounds/png/bg-show-off-stage-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 35820,
+   "states": []
+  },
+  {
+   "id": "bg-show-off-stage-1920x1080",
+   "file": "backgrounds/webp/bg-show-off-stage-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 32322,
+   "states": []
+  },
+  {
+   "id": "bg-show-off-stage-2560x1440",
+   "file": "backgrounds/png/bg-show-off-stage-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 50484,
+   "states": []
+  },
+  {
+   "id": "bg-show-off-stage-2560x1440",
+   "file": "backgrounds/webp/bg-show-off-stage-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 45794,
+   "states": []
+  },
+  {
+   "id": "bg-show-off-stage",
+   "file": "backgrounds/svg/bg-show-off-stage.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 4781,
+   "states": []
+  },
+  {
+   "id": "bg-gallery-1920x1080",
+   "file": "backgrounds/png/bg-gallery-1920x1080.png",
+   "format": "png",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 32661,
+   "states": []
+  },
+  {
+   "id": "bg-gallery-1920x1080",
+   "file": "backgrounds/webp/bg-gallery-1920x1080.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 24028,
+   "states": []
+  },
+  {
+   "id": "bg-gallery-2560x1440",
+   "file": "backgrounds/png/bg-gallery-2560x1440.png",
+   "format": "png",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 46721,
+   "states": []
+  },
+  {
+   "id": "bg-gallery-2560x1440",
+   "file": "backgrounds/webp/bg-gallery-2560x1440.webp",
+   "format": "webp",
+   "type": "background",
+   "width": 2560,
+   "height": 1440,
+   "bytes": 34674,
+   "states": []
+  },
+  {
+   "id": "bg-gallery",
+   "file": "backgrounds/svg/bg-gallery.svg",
+   "format": "svg",
+   "type": "background-source",
+   "width": 1920,
+   "height": 1080,
+   "bytes": 12288,
+   "states": []
+  }
+ ]
+}
