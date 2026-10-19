@@ -114,3 +114,14 @@ export function onTap(node, fn) {
   node.addEventListener('pointercancel', () => { down = null; });
   node.addEventListener('click', e => { if (e.detail === 0) fn(e); }); // Enter / Space
 }
+
+// One-shot effect art from Artie (fx-*) with a CSS fallback; reduced motion = soft fade.
+export function fxArt(id, x, y, size, ms = 900, fallbackCls = 'fx-ph') {
+  const layer = document.getElementById('fx');
+  const d = el('div', 'tmp fx-art', layer, { 'aria-hidden': 'true' });
+  place(d, x - size / 2, y - size / 2, size, size);
+  d.appendChild(artNode(id, () => el('div', fallbackCls), size, size));
+  d.style.animationDuration = ms + 'ms';
+  setTimeout(() => d.remove(), ms);
+  return d;
+}

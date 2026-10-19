@@ -105,6 +105,9 @@ export function speak(text) {
     const u = new SpeechSynthesisUtterance(text);
     if (voice) u.voice = voice;
     u.rate = 1.0; u.pitch = 1.35; u.volume = VOL.voice;
+    // duck the music under the voice so cues stay clear
+    u.onstart = () => bus.music && bus.music.gain.setTargetAtTime(VOL.music * 0.3, ac.currentTime, 0.1);
+    u.onend = u.onerror = () => bus.music && bus.music.gain.setTargetAtTime(VOL.music, ac.currentTime, 0.3);
     speechSynthesis.speak(u);
     return true;
   } catch (e) { return false; }

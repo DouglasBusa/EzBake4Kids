@@ -1,4 +1,4 @@
-import { el, place, artButton, sparkles, wait, reducedMotion, onTap } from '../ui.js';
+import { fxArt, el, place, artButton, sparkles, wait, reducedMotion, onTap } from '../ui.js';
 import { mkCanvas, iconCanvas, drawScene, drawMomo, drawPip, drawBiscuit, heartPath } from '../draw.js';
 import { artNode } from '../assets.js';
 import { sfx, speak } from '../audio.js';
@@ -42,7 +42,7 @@ export function create(api) {
       cast.forEach(([fn, x, y, s], i) => { const d = el('div', 'cast-hop d' + i, root, { 'aria-hidden': 'true' }); place(d, x, y, s, s); d.appendChild(iconCanvas(s, (c, cx, cy, sz) => fn(c, cx, cy, sz, 'cheer'))); });
       const conf = mkCanvas(1024, 576, 'confetti'); root.appendChild(conf); place(conf, 0, 0);
       T(() => { P.reveal(); sfx('pop'); }, 700);
-      T(() => { sfx('click'); flash.classList.add('go'); speak('Ta-da! Look what you made!'); api.say('Ta-da!', { bubbleOnly: true }); }, 1300);
+      T(() => { sfx('click'); flash.classList.add('go'); fxArt('fx-camera-flash', 512, 230, 360, 700); speak('Ta-da! Look what you made!'); api.say('Ta-da!', { bubbleOnly: true }); }, 1300);
       T(() => { sfx('cheer'); confetti(conf); }, 1500);
       T(() => showButtons(root, C), 3600);
       this.flash = flash;
@@ -55,7 +55,7 @@ export function create(api) {
     const ring = col => (c, x, y, s) => { c.beginPath(); c.arc(x, y, s * 0.44, 0, Math.PI * 2); c.fillStyle = col; c.fill(); c.lineWidth = 4; c.strokeStyle = '#6B4A3A'; c.stroke(); };
     const save = mk('btn-save', 'Save', 252, ring('#FF9C9C'), () => {
       if (!saved) { saveCreation(C); saved = true; }
-      sfx('chime'); hearts(save); speak('Saved!');
+      sfx('chime'); hearts(save); fxArt('fx-hearts-burst', 307, 420, 200, 1200); speak('Saved!');
     });
     save.id = 'saveBtn';
     mk('btn-play-again', 'Play again', 457, ring('#7CCF8A'), () => { sfx('ding'); api.resetCreation(); api.go('STEP1_CHOOSE'); }).id = 'againBtn';

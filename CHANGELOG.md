@@ -2,6 +2,16 @@
 
 All versions are free, with no ads, purchases, accounts, tracking, or links out.
 
+## v0.2: MVP polish
+No playtest notes yet, so this round fixes what showed up in automated play on desktop, iPad, and phone.
+
+**Stories covered:** all 28 P0 stories from v0.1 (US-01–10, 12–14, 16–19, 21–23, 25, 27, 29, 32, 33, 35, 36, 38), with polish on US-18, US-08, US-32, US-33, and US-02. No new stories.
+
+- US-32: the Show-Off photo now shows the decorated treats on their plate, inside the open carrier, with the carrier stickers along the bottom.
+- Cookies: Artie's golden baked cookies are tinted more softly to match the batter color, so rainbow, chocolate, and the others stay readable.
+- Artie's effect art is wired in: a flour puff when pouring flour or sugar (US-08), steam when the oven opens (US-18), a hearts burst on Save (US-33), and the camera flash star (US-32). Each falls back to a soft glow if the art is missing.
+- Audio balance (US-02): music ducks under voice cues.
+
 ## v0.1: MVP (Cupcakes + Cookies)
 The full 9-step flow and Show-Off for **Cupcakes** (with Liners) and **Cookies** (Liners skipped), using Artie's art batch "mvp-cupcakes-cookies". Characters, cast-face stickers, and character toppers still use placeholder drawings.
 

@@ -1,4 +1,4 @@
-import { el, place, artButton, rectOf, sparkles, toLocal, wait, onTap } from '../ui.js';
+import { fxArt, el, place, artButton, rectOf, sparkles, toLocal, wait, onTap } from '../ui.js';
 import { CUTTERS } from '../data.js';
 import { mkCanvas, iconCanvas, drawCupcake, drawCookie, shapePath, treatCanvas, batterFill } from '../draw.js';
 import { artNode } from '../assets.js';
@@ -182,6 +182,7 @@ export function create(api) {
     C.bakeResult = C.recipe === 'cupcakes' ? { fills: fills.map(f => Math.max(MIN, f)) } : { shapes: shapes.slice(0, 6) };
     sfx('pop'); oven.classList.remove('wiggle', 'glowing');
     setOvenArt('open'); windowBox.remove();
+    { const r = rectOf(oven); fxArt('fx-steam', r.cx, r.y + 120, 200, 1600); }
     showResult();
     api.say('Perfectly golden!');
     api.complete();

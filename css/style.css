@@ -138,3 +138,8 @@ body.rm .praise.show { animation: softfade 1.2s ease-out forwards !important; an
 body.rm .spark { animation: softfade .9s forwards !important; animation-duration: .9s !important; }
 body.rm .hud-btn.next.show { animation: none; }
 body.rm .turn-phone { transform: rotate(-90deg); }
+
+.fx-art { position: absolute; z-index: 26; animation: fxPop 900ms ease-out forwards; }
+@keyframes fxPop { 0% { opacity: 0; transform: scale(.6); } 25% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.15) translateY(-20px); } }
+.fx-ph { width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(rgba(255,255,255,.9), transparent 70%); }
+body.rm .fx-art { animation: softfade .9s forwards !important; animation-duration: .9s !important; }

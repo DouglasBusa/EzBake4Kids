@@ -474,17 +474,18 @@ export const STICKER_AREA = { x: 0.08, y: 0.22, w: 0.84, h: 0.7 };
 // ---------- full scene used by Show-Off and Gallery thumbnails ----------
 export function drawScene(ctx, C, w, h, { open = true } = {}) {
   ctx.fillStyle = '#FFF4E0'; ctx.fillRect(0, 0, w, h);
-  ctx.fillStyle = '#B8E8D2'; ctx.fillRect(0, h * 0.72, w, h * 0.28);
-  const cw = w * 0.7, ch = h * 0.78, cx = w / 2, cy = h * 0.55;
-  drawCarrier(ctx, C.carrier || 'bento', cx, cy, cw, ch, open);
-  // stickers on the carrier body
-  for (const st of C.carrierDecor || []) drawSticker(ctx, st.id, cx - cw / 2 + st.x * cw, cy - ch / 2 + st.y * ch, ch * 0.2);
-  if (open) {
-    const pw = cw * 0.8, ph = ch * 0.42, py = cy - ch * 0.2;
-    drawPlate(ctx, C.plate || 'round-pink', cx, py, pw, ph);
-    const n = 6, s = Math.min(pw / 3.6, ph / 1.6);
-    for (let i = 0; i < n; i++) { const col = i % 3, row = Math.floor(i / 3); drawTreat(ctx, C, i, cx + (col - 1) * s * 1.05, py - s * 0.35 + row * s * 0.7, s); }
-  }
+  ctx.fillStyle = '#B8E8D2'; ctx.fillRect(0, h * 0.74, w, h * 0.26);
+  const cw = w * 0.92, ch = h * 0.86, cx = w / 2, cy = h * 0.52;
+  const inner = drawCarrier(ctx, C.carrier || 'bento', cx, cy, cw, ch, open);
+  const stickers = C.carrierDecor || [];
+  if (!open) { for (const st of stickers) drawSticker(ctx, st.id, cx - cw / 2 + st.x * cw, cy - ch / 2 + st.y * ch, ch * 0.2); return; }
+  // decorated treats on their plate, sitting inside the open carrier
+  const pw = inner.w * 1.05, ph = inner.h * 1.25, px = inner.x + inner.w / 2, py = inner.y + inner.h * 0.55;
+  drawPlate(ctx, C.plate || 'round-pink', px, py, pw, ph);
+  const s = Math.min(pw / 3.3, ph / 1.5);
+  for (let i = 0; i < 6; i++) { const col = i % 3, row = Math.floor(i / 3); drawTreat(ctx, C, i, px + (col - 1) * s * 0.95, py - s * 0.28 + row * s * 0.55, s); }
+  // carrier stickers show along the bottom edge of the photo
+  stickers.slice(0, 8).forEach((st, i) => drawSticker(ctx, st.id, w * (0.1 + i * 0.115), h * 0.9, h * 0.13));
 }
 
 // Artie's baked cookies are golden only: tint them to the batter color with a multiply.
@@ -498,12 +499,13 @@ export function tintedCookieImage(shape, colorId) {
   const c = document.createElement('canvas'); c.width = w * 2; c.height = h * 2;
   const x = c.getContext('2d'); x.drawImage(img, 0, 0, c.width, c.height);
   if (colorId !== 'vanilla') {
-    x.globalCompositeOperation = 'multiply';
+    // paint the batter color over the golden cookie (keeps Artie's outline and chips readable)
     const C = COLORS.find(k => k.id === colorId);
-    if (C && C.hex === 'rainbow') { const g = x.createLinearGradient(0, 0, c.width, c.height); RAINBOW.forEach((k, i) => g.addColorStop(i / 5, lighten(k, 0.45))); x.fillStyle = g; }
-    else x.fillStyle = lighten(C ? C.hex : '#ffffff', colorId === 'chocolate' ? 0.1 : 0.35);
+    x.globalCompositeOperation = 'source-atop'; x.globalAlpha = colorId === 'chocolate' ? 0.6 : 0.5;
+    if (C && C.hex === 'rainbow') { const g = x.createLinearGradient(0, 0, c.width, c.height); RAINBOW.forEach((k, i) => g.addColorStop(i / 5, k)); x.fillStyle = g; }
+    else x.fillStyle = C ? C.hex : '#ffffff';
     x.fillRect(0, 0, c.width, c.height);
-    x.globalCompositeOperation = 'destination-in'; x.drawImage(img, 0, 0, c.width, c.height);
+    x.globalAlpha = 1; x.globalCompositeOperation = 'source-over';
   }
   tintCache.set(key, c);
   return c;

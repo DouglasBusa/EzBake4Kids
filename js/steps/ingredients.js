@@ -1,4 +1,4 @@
-import { el, place, startDrag, rectOf, grow, overlaps, sparkles, toLocal, wait } from '../ui.js';
+import { fxArt, el, place, startDrag, rectOf, grow, overlaps, sparkles, toLocal, wait } from '../ui.js';
 import { RECIPES, INGREDIENTS } from '../data.js';
 import { mkCanvas, iconCanvas, drawBowl, drawIngredient } from '../draw.js';
 import { artNode } from '../assets.js';
@@ -60,6 +60,7 @@ export function create(api) {
     ghost.classList.add('pouring');
     ghost.style.transform = `translate(${b.cx - 20}px, ${b.y - 90}px) rotate(-70deg)`;
     sfx('pour');
+    if (kind === 'flour' || kind === 'sugar') setTimeout(() => fxArt('fx-flour-puff', b.cx, b.y + 10, 150, 900), 300);
     for (let i = 0; i < 10; i++) setTimeout(() => {
       const p = el('div', 'tmp drip', document.getElementById('fx'));
       place(p, b.cx - 30 + Math.random() * 30, b.y - 30, 14, 14);
