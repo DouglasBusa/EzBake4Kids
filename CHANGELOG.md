@@ -2,6 +2,9 @@
 
 All versions are free, with no ads, purchases, accounts, tracking, or links out.
 
+## v0.2.1
+- Turned off the spoken AI voice cues (sound effects and music stay). Hint hand shows instead.
+
 ## v0.2: MVP polish
 No playtest notes yet, so this round fixes what showed up in automated play on desktop, iPad, and phone.
 

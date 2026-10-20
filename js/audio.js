@@ -98,8 +98,11 @@ function pickVoice() {
 }
 if (window.speechSynthesis) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
+// Spoken voice cues are off for now (Dougie's call); flip to true to bring them back.
+const VOICE_ON = false;
+
 export function speak(text) {
-  if (muted || !text || !window.speechSynthesis) return false;
+  if (!VOICE_ON || muted || !text || !window.speechSynthesis) return false;
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
