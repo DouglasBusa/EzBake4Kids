@@ -252,6 +252,10 @@ document.addEventListener('dblclick', e => e.preventDefault());
 document.addEventListener('gesturestart', e => e.preventDefault());
 window.addEventListener('pointerdown', () => unlock(), { once: false, passive: true });
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  // When an update takes over, reload once so players get the new version right away.
+  let reloaded = false;
+  const hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (hadController && !reloaded) { reloaded = true; location.reload(); } });
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
 loadManifest().then(() => preloadAll()).then(() => go(app.screen || 'HOME'));

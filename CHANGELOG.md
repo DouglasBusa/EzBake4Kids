@@ -2,6 +2,9 @@
 
 All versions are free, with no ads, purchases, accounts, tracking, or links out.
 
+## v0.2.2
+- Fix: game updates now replace the offline copy right away (offline cache skips the browser's stale HTTP cache and the page reloads once when an update takes over), so the voice-off change actually reaches players.
+
 ## v0.2.1
 - Turned off the spoken AI voice cues (sound effects and music stay). Hint hand shows instead.
 
