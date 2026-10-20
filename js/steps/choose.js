@@ -14,7 +14,7 @@ export function create(api) {
           if (rid === 'cupcakes') { drawCupcake(c, x - s * 0.16, y + s * 0.04, s * 0.44, { liner: 'dots', color: 'strawberry', fill: 0.9, baked: true, frost: '#fff' }); drawCupcake(c, x + s * 0.18, y + s * 0.06, s * 0.4, { liner: 'stars', color: 'vanilla', fill: 0.9, baked: true, frost: '#CDB8F0' }); }
           else { drawCookie(c, x - s * 0.15, y - s * 0.02, s * 0.4, { shape: 'heart', color: 'vanilla' }); drawCookie(c, x + s * 0.16, y + s * 0.1, s * 0.38, { shape: 'star', color: 'strawberry' }); }
         } });
-        place(b, 196 + i * 372, 150, 260, 260);
+        place(b, 196 + i * 372, 150, 260, 260, { x: 260, y: 230 + i * 400 });
         b.dataset.recipe = rid;
         onTap(b, () => pick(rid));
         cards[rid] = b;

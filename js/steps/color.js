@@ -40,7 +40,7 @@ export function create(api) {
       draw(under, C.color);
       COLORS.forEach((col, i) => {
         const b = artButton(root, { id: col.art, label: col.name, size: 96, cls: 'blob', draw: (c, x, y, s) => drawColorBlob(c, col.id, x, y, s * 0.9) });
-        place(b, 520 + (i % 4) * 120, 180 + Math.floor(i / 4) * 130, 96, 96);
+        place(b, 520 + (i % 4) * 120, 180 + Math.floor(i / 4) * 130, 96, 96, { x: 162 + (i % 4) * 120, y: 700 + Math.floor(i / 4) * 140 });
         onTap(b, () => pick(col));
         blobs[col.id] = b;
       });

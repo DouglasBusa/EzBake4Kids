@@ -14,11 +14,44 @@ export function el(tag, cls, parent, attrs = {}) {
   return e;
 }
 // Place an element at logical stage coordinates (stage is 1024x576).
-export function place(e, x, y, w, h) {
-  Object.assign(e.style, { position: 'absolute', left: x + 'px', top: y + 'px' });
-  if (w != null) e.style.width = w + 'px';
-  if (h != null) e.style.height = h + 'px';
+// Layout elements (direct children of a screen view, the HUD or a .sub layer) are
+// laid out in landscape coords and remapped for the portrait stage (780 wide):
+// the right-hand panel (x >= 780) moves below the play area, the play area moves
+// down 80 px under a two-row HUD. `p` = explicit portrait position {x, y, w, h}.
+let portrait = false, pOff = 0; // pOff: vertical centering offset in tall portrait stages
+export const isPortrait = () => portrait;
+export const PANEL_X = 780;
+export function mapPt(x, y) {
+  if (!portrait) return { x, y };
+  return x >= PANEL_X ? { x: x - PANEL_X + 268, y: y + 560 + pOff } : { x, y: y + 80 + pOff };
+}
+function isLayout(e) {
+  const par = e.parentElement;
+  return !!par && (par.id === 'hud' || par.classList.contains('view') || par.classList.contains('sub'));
+}
+function applyPlace(e) {
+  const { x, y, w, h, p } = e._pl;
+  let X = x, Y = y, W = w, H = h;
+  if (portrait && e._layout) {
+    if (p) { X = p.x ?? X; Y = (p.y ?? Y) + pOff; W = p.w ?? W; H = p.h ?? H; }
+    else ({ x: X, y: Y } = mapPt(x, y));
+  }
+  Object.assign(e.style, { position: 'absolute', left: X + 'px', top: Y + 'px' });
+  if (W != null) e.style.width = W + 'px';
+  if (H != null) e.style.height = H + 'px';
+}
+export function place(e, x, y, w, h, p) {
+  e._pl = { x, y, w, h, p };
+  e._layout = isLayout(e);
+  if (e._layout) e.classList.add('laid');
+  applyPlace(e);
   return e;
+}
+export function setPortrait(v, off = 0) {
+  if (portrait === v && pOff === off) return false;
+  portrait = v; pOff = off;
+  document.querySelectorAll('.laid').forEach(n => n._pl && applyPlace(n));
+  return true;
 }
 // Big button with art (by id) or placeholder icon.
 export function artButton(parent, { id, label, size = 96, draw, cls = '' }) {
@@ -98,21 +131,49 @@ export function sparkles(x, y, n = 8, spread = 70) {
 }
 export const wait = ms => new Promise(r => setTimeout(r, ms));
 
-// Reliable tap for kids: fires on pointerup over the same element (works with
-// touch, mouse and pen, even right after a drag), plus keyboard activation.
+// Intentional tap: fires on pointerup only if the finger stayed on the element,
+// moved < 10 px, didn't take too long, and nothing scrolled in between.
+// Works for touch, mouse and pen, including taps right after a drag; Enter/Space via click.
+const TAP_SLOP = 10, TAP_MAX_MS = 1200;
+const liveTaps = new Set();
+window.addEventListener('scroll', () => liveTaps.forEach(t => { t.d = null; }), true);
+function scrollKey(node) {
+  const parts = [window.scrollX, window.scrollY];
+  // only containers the player can actually scroll (overflow auto/scroll); hidden-overflow
+  // boxes can shift when a button gets focus, which isn't a scroll gesture
+  for (let n = node.parentElement; n && n !== document.body; n = n.parentElement) {
+    const cs = getComputedStyle(n);
+    if (/(auto|scroll)/.test(cs.overflowX + cs.overflowY) && (n.scrollHeight > n.clientHeight || n.scrollWidth > n.clientWidth)) parts.push(n.scrollTop, n.scrollLeft);
+  }
+  return parts.join(',');
+}
 export function onTap(node, fn) {
-  let down = null;
-  node.addEventListener('pointerdown', e => { down = { id: e.pointerId, x: e.clientX, y: e.clientY }; });
-  node.addEventListener('pointerup', e => {
-    if (!down || down.id !== e.pointerId) return;
-    const moved = Math.hypot(e.clientX - down.x, e.clientY - down.y);
-    down = null;
-    const r = node.getBoundingClientRect();
-    const inside = e.clientX >= r.left - 20 && e.clientX <= r.right + 20 && e.clientY >= r.top - 20 && e.clientY <= r.bottom + 20;
-    if (inside && moved < 40) fn(e);
+  const t = { d: null };
+  liveTaps.add(t);
+  node.addEventListener('pointerdown', e => {
+    if (e.button > 0) return;
+    t.d = { id: e.pointerId, x: e.clientX, y: e.clientY, at: performance.now(), max: 0, sk: scrollKey(node) };
   });
-  node.addEventListener('pointercancel', () => { down = null; });
-  node.addEventListener('click', e => { if (e.detail === 0) fn(e); }); // Enter / Space
+  node.addEventListener('pointermove', e => {
+    if (!t.d || t.d.id !== e.pointerId) return;
+    t.d.max = Math.max(t.d.max, Math.hypot(e.clientX - t.d.x, e.clientY - t.d.y));
+    if (t.d.max >= TAP_SLOP) t.d = null; // it's a swipe/scroll, not a tap
+  });
+  node.addEventListener('pointerup', e => {
+    const d = t.d; t.d = null;
+    const why = r => { if (window.__tapDebug) console.log('tap rejected:', r, node.getAttribute('aria-label')); };
+    if (!d || d.id !== e.pointerId) return why('no-down');
+    if (Math.hypot(e.clientX - d.x, e.clientY - d.y) >= TAP_SLOP) return why('moved');
+    if (performance.now() - d.at > TAP_MAX_MS) return why('slow');
+    if (scrollKey(node) !== d.sk) return why('scrolled');
+    const hit = document.elementFromPoint(e.clientX, e.clientY);
+    if (hit && !node.contains(hit) && hit !== node) return why('off:' + hit.className); // lifted off the button
+    fn(e);
+  });
+  const cancel = () => { t.d = null; };
+  node.addEventListener('pointercancel', cancel);
+  node.addEventListener('lostpointercapture', e => { if (t.d && t.d.id === e.pointerId && e.pointerType !== 'touch') cancel(); });
+  node.addEventListener('click', e => { if (e.detail === 0) fn(e); }); // keyboard
 }
 
 // One-shot effect art from Artie (fx-*) with a CSS fallback; reduced motion = soft fade.

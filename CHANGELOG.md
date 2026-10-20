@@ -2,6 +2,15 @@
 
 All versions are free, with no ads, purchases, accounts, tracking, or links out.
 
+## v0.2.3: Phone fixes from playtest (taps vs. swipes, portrait play)
+**Stories touched:** US-01, US-05, US-06 (tap behaviour, layout); no new stories.
+
+- **Swipes no longer press buttons.** A button now fires only on an intentional tap: the finger lifts on the same button, moves less than 10 px in total, the press is shorter than 1.2 s, and nothing scrolled. `pointercancel` cancels the tap. Taps still work right after a drag, and Enter/Space still work.
+- **Full portrait play.** The "turn me sideways" blocker is gone and the manifest orientation is now `any`. Portrait uses a taller stage (780 wide): the HUD sits in two rows, the play area comes next, and the option trays reflow underneath. Turning the device mid-step re-lays out in place without losing progress. Buttons stay at least 44 CSS px on a 390-px-wide phone (about 48–60 px in practice). Landscape is unchanged.
+- Touch-action: game areas stay `none` for drags, stirring and frosting. The page and gallery allow `pan-y`, so the gallery scrolls natively.
+- Hit tests for hold-to-fill, frosting/toppers and carrier stickers now follow the current layout, and cookies land on the tray inside the tray itself.
+- The service worker cache is bumped to `ezbake-v0.2.3`. Voice stays off (`VOICE_ON=false`), and the `cache:'reload'` install with a reload on update is kept.
+
 ## v0.2.2
 - Fix: game updates now replace the offline copy right away (offline cache skips the browser's stale HTTP cache and the page reloads once when an update takes over), so the voice-off change actually reaches players.
 

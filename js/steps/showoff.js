@@ -16,9 +16,9 @@ export function saveCreation(C) {
 }
 
 // Polaroid with the scene; returns { frame, open() }
-export function polaroid(root, C, x, y, w, h) {
+export function polaroid(root, C, x, y, w, h, pp) {
   const frame = el('div', 'polaroid', root, { role: 'img', 'aria-label': 'Your creation' });
-  place(frame, x, y, w, h);
+  place(frame, x, y, w, h, pp ? { x: pp.x, y: pp.y } : undefined);
   frame.appendChild(artNode('fx-polaroid-frame', () => { const d = document.createElement('div'); d.className = 'polaroid-ph'; return d; }, w, h));
   // photo window per Artie's frame: 40,44 320x328 of 400x480
   const px = w * 40 / 400, py = h * 44 / 480, pw = w * 320 / 400, ph = h * 328 / 480;
@@ -36,10 +36,10 @@ export function create(api) {
     enter(root, C) {
       C.createdAt = C.createdAt || Date.now();
       const flash = el('div', 'flash tmp', document.getElementById('fx'));
-      const P = polaroid(root, C, 352, 40, 320, 384);
+      const P = polaroid(root, C, 352, 40, 320, 384, { x: 190, y: 200, w: 400, h: 480 });
       P.frame.classList.add('drop-in');
-      const cast = [[drawMomo, 70, 260, 230], [drawPip, 760, 300, 150], [drawBiscuit, 880, 320, 140]];
-      cast.forEach(([fn, x, y, s], i) => { const d = el('div', 'cast-hop d' + i, root, { 'aria-hidden': 'true' }); place(d, x, y, s, s); d.appendChild(iconCanvas(s, (c, cx, cy, sz) => fn(c, cx, cy, sz, 'cheer'))); });
+      const cast = [[drawMomo, 70, 260, 230, { x: 60, y: 600 }], [drawPip, 760, 300, 150, { x: 360, y: 660 }], [drawBiscuit, 880, 320, 140, { x: 540, y: 670 }]];
+      cast.forEach(([fn, x, y, s, pp], i) => { const d = el('div', 'cast-hop d' + i, root, { 'aria-hidden': 'true' }); place(d, x, y, s, s, pp); d.appendChild(iconCanvas(s, (c, cx, cy, sz) => fn(c, cx, cy, sz, 'cheer'))); });
       const conf = mkCanvas(1024, 576, 'confetti'); root.appendChild(conf); place(conf, 0, 0);
       T(() => { P.reveal(); sfx('pop'); }, 700);
       T(() => { sfx('click'); flash.classList.add('go'); fxArt('fx-camera-flash', 512, 230, 360, 700); speak('Ta-da! Look what you made!'); api.say('Ta-da!', { bubbleOnly: true }); }, 1300);
@@ -50,7 +50,7 @@ export function create(api) {
     exit() { timers.forEach(clearTimeout); this.flash && this.flash.remove(); cancelAnimationFrame(confRaf); }
   };
   function showButtons(root, C) {
-    const bar = el('div', 'end-buttons', root); place(bar, 0, 452, 1024, 120);
+    const bar = el('div', 'end-buttons', root); place(bar, 0, 452, 1024, 120, { x: -120, y: 920 });
     const mk = (id, label, x, draw, fn) => { const b = artButton(bar, { id, label, size: 110, cls: 'pop-in', draw }); place(b, x, 4, 110, 110); onTap(b, fn); return b; };
     const ring = col => (c, x, y, s) => { c.beginPath(); c.arc(x, y, s * 0.44, 0, Math.PI * 2); c.fillStyle = col; c.fill(); c.lineWidth = 4; c.strokeStyle = '#6B4A3A'; c.stroke(); };
     const save = mk('btn-save', 'Save', 252, ring('#FF9C9C'), () => {

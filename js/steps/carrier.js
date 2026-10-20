@@ -33,7 +33,7 @@ export function create(api) {
       for (let i = 0; i < 6; i++) { const t = treatCanvas(C, i, 90); t.classList.add('hop'); root.appendChild(t); treats.push(t); }
       CARRIERS.forEach((k, i) => {
         const b = artButton(root, { id: k.artOpen, label: k.name, size: 136, cls: 'carrier-btn', draw: (c, x, y, s) => drawCarrier(c, k.id, x, y, s * 0.92, s * 0.7, false) });
-        place(b, 688 + (i % 2) * 160, 130 + Math.floor(i / 2) * 170, 136, 136);
+        place(b, 688 + (i % 2) * 160, 130 + Math.floor(i / 2) * 170, 136, 136, { x: 50 + i * 180, y: 720 });
         onTap(b, () => choose(k.id));
         btns[k.id] = b;
       });

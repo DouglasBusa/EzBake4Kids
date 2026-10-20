@@ -2,7 +2,7 @@
 import { loadManifest, preloadAll, artNode, hasArt } from './assets.js';
 import { unlock, sfx, speak, isMuted, setMuted } from './audio.js';
 import { CUES, PRAISE } from './data.js';
-import { el, place, setScale, rectOf, sparkles, wait, onTap } from './ui.js';
+import { el, place, setScale, rectOf, sparkles, wait, onTap, setPortrait } from './ui.js';
 import { setStageScale, iconCanvas, drawMomo, starPath } from './draw.js';
 import * as Home from './steps/home.js';
 import * as Choose from './steps/choose.js';
@@ -55,12 +55,21 @@ const visibleSteps = () => STEPS.filter(s => s !== 'STEP3_LINERS' || app.C.recip
 
 // ---- layout / scaling ----
 const stage = document.getElementById('stage');
+// Landscape stage is 1024x576. Portrait (taller than wide) uses a 780x1144 stage:
+// HUD in two rows, play area, then the option panel underneath.
 function fit() {
-  const s = Math.min(window.innerWidth / 1024, window.innerHeight / 576);
+  const port = window.innerHeight > window.innerWidth * 1.05;
+  // tall phones get a taller portrait stage (content centered) instead of big empty bars
+  const W = port ? 780 : 1024, H = port ? Math.max(1144, Math.min(1800, Math.round(780 * window.innerHeight / window.innerWidth))) : 576;
+  stage.classList.toggle('portrait', port);
+  document.body.classList.toggle('portrait', port);
+  stage.style.width = W + 'px'; stage.style.height = H + 'px';
+  setPortrait(port, port ? Math.round((H - 1144) / 2) : 0);
+  const s = Math.min(window.innerWidth / W, window.innerHeight / H);
   stage.style.transform = `translate(-50%, -50%) scale(${s})`;
   setScale(s); setStageScale(s);
 }
-window.addEventListener('resize', fit); fit();
+window.addEventListener('resize', fit); window.addEventListener('orientationchange', () => setTimeout(fit, 50)); fit();
 const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
 const applyRM = () => document.body.classList.toggle('rm', mq.matches);
 applyRM(); mq.addEventListener && mq.addEventListener('change', applyRM);
@@ -88,19 +97,19 @@ function setBackground(name) {
 const hud = document.getElementById('hud');
 const screenRoot = document.getElementById('screen');
 const fx = document.getElementById('fx');
-function hudButton(id, label, x, y, size, draw, handler) {
+function hudButton(id, label, x, y, size, draw, handler, pp) {
   const b = el('button', 'btn hud-btn', hud, { 'aria-label': label, type: 'button' });
-  place(b, x, y, size, size);
+  place(b, x, y, size, size, pp);
   b.appendChild(artNode(id, () => iconCanvas(size, draw), size, size));
   onTap(b, handler);
   return b;
 }
 const circle = (c, x, y, s, col) => { c.beginPath(); c.arc(x, y, s * 0.46, 0, Math.PI * 2); c.fillStyle = col; c.fill(); c.lineWidth = s * 0.04; c.strokeStyle = '#6B4A3A'; c.stroke(); };
 const arrow = (c, x, y, s, dir) => { c.beginPath(); c.moveTo(x - dir * s * 0.18, y - s * 0.2); c.lineTo(x + dir * s * 0.16, y); c.lineTo(x - dir * s * 0.18, y + s * 0.2); c.lineWidth = s * 0.1; c.lineCap = c.lineJoin = 'round'; c.strokeStyle = '#fff'; c.stroke(); };
-const backBtn = hudButton('btn-back', 'Back', 16, 8, 96, (c, x, y, s) => { circle(c, x, y, s, '#A9D8F5'); arrow(c, x, y, s, -1); }, () => { sfx('pop'); go(prevOf(app.screen), { back: true }); });
-const speakerBtn = hudButton('btn-speaker', 'Hear it again', 792, 8, 96, (c, x, y, s) => { circle(c, x, y, s, '#FFE98A'); c.fillStyle = '#6B4A3A'; c.fillRect(x - s * 0.2, y - s * 0.08, s * 0.12, s * 0.16); c.beginPath(); c.moveTo(x - s * 0.1, y - s * 0.08); c.lineTo(x + s * 0.06, y - s * 0.2); c.lineTo(x + s * 0.06, y + s * 0.2); c.lineTo(x - s * 0.1, y + s * 0.08); c.fill(); c.lineWidth = s * 0.04; c.strokeStyle = '#6B4A3A'; c.beginPath(); c.arc(x + s * 0.08, y, s * 0.14, -0.8, 0.8); c.stroke(); }, () => { unlock(); playCue(true); });
+const backBtn = hudButton('btn-back', 'Back', 16, 8, 96, (c, x, y, s) => { circle(c, x, y, s, '#A9D8F5'); arrow(c, x, y, s, -1); }, () => { sfx('pop'); go(prevOf(app.screen), { back: true }); }, { x: 16, y: 8 });
+const speakerBtn = hudButton('btn-speaker', 'Hear it again', 792, 8, 96, (c, x, y, s) => { circle(c, x, y, s, '#FFE98A'); c.fillStyle = '#6B4A3A'; c.fillRect(x - s * 0.2, y - s * 0.08, s * 0.12, s * 0.16); c.beginPath(); c.moveTo(x - s * 0.1, y - s * 0.08); c.lineTo(x + s * 0.06, y - s * 0.2); c.lineTo(x + s * 0.06, y + s * 0.2); c.lineTo(x - s * 0.1, y + s * 0.08); c.fill(); c.lineWidth = s * 0.04; c.strokeStyle = '#6B4A3A'; c.beginPath(); c.arc(x + s * 0.08, y, s * 0.14, -0.8, 0.8); c.stroke(); }, () => { unlock(); playCue(true); }, { x: 568, y: 8 });
 const muteBtn = el('button', 'btn hud-btn mute', hud, { type: 'button' });
-place(muteBtn, 912, 8, 96, 96);
+place(muteBtn, 912, 8, 96, 96, { x: 676, y: 8 });
 function drawMute() {
   muteBtn.innerHTML = '';
   muteBtn.setAttribute('aria-label', isMuted() ? 'Sound on' : 'Sound off');
@@ -113,12 +122,12 @@ function drawMute() {
 drawMute();
 onTap(muteBtn, () => { unlock(); setMuted(!isMuted()); drawMute(); if (!isMuted()) sfx('pop'); });
 const momoBox = el('div', 'momo-guide', hud, { 'aria-hidden': 'true' });
-place(momoBox, 124, 8, 96, 96);
+place(momoBox, 124, 8, 96, 96, { x: 124, y: 8 });
 const momoCanvas = iconCanvas(96, (c, x, y, s) => drawMomo(c, x, y, s * 0.95, 'idle'));
 momoBox.appendChild(momoCanvas);
 const bubble = el('div', 'bubble', hud, { 'aria-live': 'polite' });
 const trail = el('div', 'trail', hud, { 'aria-hidden': 'true' });
-place(trail, 228, 20, 556, 72);
+place(trail, 228, 20, 556, 72, { x: 112, y: 112, w: 556 });
 const nextBtn = hudButton('btn-next', 'Next', 896, 456, 112, (c, x, y, s) => { circle(c, x, y, s, '#7CCF8A'); arrow(c, x, y, s, 1); }, () => onNext());
 nextBtn.classList.add('next');
 const hand = el('div', 'hint-hand', fx, { 'aria-hidden': 'true' });

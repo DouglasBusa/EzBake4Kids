@@ -97,8 +97,8 @@ export function create(api) {
     if (eggState === 0) { eggState = 1; renderEgg(); sfx('crack'); egg.classList.remove('wiggle'); void egg.offsetWidth; egg.classList.add('wiggle'); return; }
     busy = true; eggState = 2; renderEgg(); sfx('plop');
     const b = bowlRect();
-    const y = el('div', 'tmp yolk', document.getElementById('fx')); place(y, 497, 200, 30, 30);
-    requestAnimationFrame(() => { y.style.transform = `translateY(${b.y + 50 - 200}px)`; });
+    const er = rectOf(egg); const y = el('div', 'tmp yolk', document.getElementById('fx')); place(y, er.cx - 15, er.cy - 10, 30, 30);
+    requestAnimationFrame(() => { y.style.transform = `translateY(${b.y + 50 - er.cy}px)`; });
     await wait(450); y.remove();
     added++; level = added / total; drawB();
     egg.classList.add('fade-out');

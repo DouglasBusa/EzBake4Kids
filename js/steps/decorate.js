@@ -1,4 +1,4 @@
-import { el, place, artButton, rectOf, sparkles, toLocal, startDrag, onTap } from '../ui.js';
+import { mapPt, el, place, artButton, rectOf, sparkles, toLocal, startDrag, onTap } from '../ui.js';
 import { FROSTINGS, SPRINKLES, TOPPERS } from '../data.js';
 import { mkCanvas, iconCanvas, drawTreat, decorGeom, drawTopper, drawSprinkle } from '../draw.js';
 import { artNode } from '../assets.js';
@@ -26,7 +26,8 @@ export function create(api) {
     c.fillStyle = 'rgba(255,255,255,.9)'; c.strokeStyle = 'rgba(107,74,58,.5)'; c.lineWidth = 1.5;
     GUIDE.forEach((p, i) => { if (i % 3) return; c.beginPath(); c.arc(g.cx + p[0] * g.R, g.cy + p[1] * g.R, 4, 0, Math.PI * 2); c.fill(); c.stroke(); });
   }
-  const norm = p => { const g = geom(); return [(p.x - CV.x - g.cx) / g.R, (p.y - CV.y - g.cy) / g.R]; };
+  const O = () => mapPt(CV.x, CV.y); // canvas origin on the current stage
+  const norm = p => { const g = geom(), o = O(); return [(p.x - o.x - g.cx) / g.R, (p.y - o.y - g.cy) / g.R]; };
   const guideDist = n => Math.min(...GUIDE.map(q => Math.hypot(q[0] - n[0], q[1] - n[1]))) * geom().R;
   const changed = () => { redraw(); api.progress(); if (C.decorations.length) api.complete({ quiet: true }); };
 
@@ -91,7 +92,8 @@ export function create(api) {
   }
   function down(e) {
     const p = toLocal(e);
-    if (p.x < CV.x - 40 || p.x > CV.x + CV.w + 40 || p.y < CV.y - 20 || p.y > CV.y + CV.h) return;
+    const o = O();
+    if (p.x < o.x - 40 || p.x > o.x + CV.w + 40 || p.y < o.y - 20 || p.y > o.y + CV.h) return;
     const n = norm(p);
     // grab a placed topper to move it (any mode)
     for (let i = C.decorations.length - 1; i >= 0; i--) {
@@ -99,7 +101,7 @@ export function create(api) {
       if (d.type === 'topper' && Math.hypot(d.x - n[0], d.y - n[1]) < 0.3) {
         C.decorations.splice(i, 1); redraw();
         const g = geom();
-        dragTopper(e, d.id, { cx: CV.x + g.cx + d.x * g.R, cy: CV.y + g.cy + d.y * g.R, x: 0, y: 0, w: 0, h: 0 });
+        dragTopper(e, d.id, { cx: o.x + g.cx + d.x * g.R, cy: o.y + g.cy + d.y * g.R, x: 0, y: 0, w: 0, h: 0 });
         // released off the treat -> it goes back to the tray (removed); on the treat -> re-placed
         return;
       }

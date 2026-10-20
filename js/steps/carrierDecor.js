@@ -1,4 +1,4 @@
-import { el, place, artButton, startDrag, rectOf, sparkles, onTap } from '../ui.js';
+import { mapPt, el, place, artButton, startDrag, rectOf, sparkles, onTap } from '../ui.js';
 import { STICKERS } from '../data.js';
 import { mkCanvas, drawCarrier, drawSticker, iconCanvas } from '../draw.js';
 import { sfx } from '../audio.js';
@@ -17,7 +17,8 @@ export function create(api) {
       d.addEventListener('pointerdown', e => {
         e.stopPropagation();
         C.carrierDecor.splice(C.carrierDecor.indexOf(st), 1); renderPlaced();
-        drag(e, st.id, { cx: BOX.x + st.x * BOX.w, cy: BOX.y + st.y * BOX.h, x: 0, y: 0, w: 0, h: 0 });
+        const o = mapPt(BOX.x, BOX.y);
+        drag(e, st.id, { cx: o.x + st.x * BOX.w, cy: o.y + st.y * BOX.h, x: 0, y: 0, w: 0, h: 0 });
       });
     });
   }
@@ -27,9 +28,9 @@ export function create(api) {
       size: 96, from, makeGhost: () => stickerNode(id, 96),
       onDrop: (gr, p) => {
         // 1.5x zone around the carrier
-        const gx = BOX.w * 0.25, gy = BOX.h * 0.25;
-        if (p.x > BOX.x - gx && p.x < BOX.x + BOX.w + gx && p.y > BOX.y - gy && p.y < BOX.y + BOX.h + gy) {
-          const x = Math.max(0.08, Math.min(0.92, (p.x - BOX.x) / BOX.w)), y = Math.max(0.15, Math.min(0.9, (p.y - BOX.y) / BOX.h));
+        const gx = BOX.w * 0.25, gy = BOX.h * 0.25, o = mapPt(BOX.x, BOX.y);
+        if (p.x > o.x - gx && p.x < o.x + BOX.w + gx && p.y > o.y - gy && p.y < o.y + BOX.h + gy) {
+          const x = Math.max(0.08, Math.min(0.92, (p.x - o.x) / BOX.w)), y = Math.max(0.15, Math.min(0.9, (p.y - o.y) / BOX.h));
           C.carrierDecor.push({ id, x, y }); sfx('pop'); sparkles(p.x, p.y, 5, 40); renderPlaced(); return true;
         }
         renderPlaced(); return false; // goes back to the sticker tray

@@ -2,11 +2,13 @@
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; height: 100%; overflow: hidden; background: #FFF4E0; color: #6B4A3A;
   font-family: "Trebuchet MS", "Arial Rounded MT Bold", system-ui, sans-serif;
-  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: none; overscroll-behavior: none; }
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: pan-y; overscroll-behavior: none; }
 #app { position: fixed; inset: 0; overflow: hidden; }
-#stage { position: absolute; left: 50%; top: 50%; width: 1024px; height: 576px; transform-origin: 50% 50%; touch-action: none; overflow: hidden; background: #FFF4E0; }
+#stage { position: absolute; left: 50%; top: 50%; width: 1024px; height: 576px; transform-origin: 50% 50%; touch-action: pan-y; overflow: hidden; background: #FFF4E0; }
 #bg { position: absolute; inset: 0; background: linear-gradient(#FFF4E0, #FBE3D0); background-size: cover; background-position: center; }
 #screen, .view { position: absolute; inset: 0; }
+.view { touch-action: none; } /* drags, stirring, frosting */
+.view-gallery, .view-gallery .thumb { touch-action: pan-y; } /* the gallery list scrolls natively */
 #hud { position: absolute; inset: 0; pointer-events: none; }
 #hud > * { pointer-events: auto; }
 #hud .trail, #hud .bubble, #hud .momo-guide { pointer-events: none; }
@@ -125,11 +127,9 @@ body[data-screen="HOME"] .bubble { left: 380px; top: 440px; }
 .thumb { width: 196px; height: 146px; background: #fff; border-radius: 14px; box-shadow: 0 4px 10px rgba(107,74,58,.2); }
 .overlay { background: rgba(107,74,58,.35); z-index: 30; }
 
-/* portrait: friendly "turn me sideways" */
-#turn { display: none; position: fixed; inset: 0; z-index: 100; background: #FFF4E0; color: #6B4A3A; flex-direction: column; align-items: center; justify-content: center; font-size: 30px; font-weight: bold; }
-.turn-phone { width: 90px; height: 150px; border: 8px solid #6B4A3A; border-radius: 20px; background: #F7A8C0; animation: turnme 2s ease-in-out infinite; }
-@keyframes turnme { 0%, 30% { transform: rotate(0); } 60%, 100% { transform: rotate(-90deg); } }
-@media (orientation: portrait) and (max-width: 900px) { #turn { display: flex; } }
+/* portrait: 780x1144 stage, HUD in two rows, panel under the play area (see ui.js place) */
+body.portrait .bubble { left: 112px; top: 196px; max-width: 556px; }
+body.portrait[data-screen="HOME"] .bubble { left: 200px; top: 500px; }
 
 /* gentler motion: bounces/confetti/shakes become soft fades */
 body.rm *, body.rm *::before, body.rm *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .2s !important; }
@@ -137,9 +137,10 @@ body.rm .hint-hand.show { animation: none; }
 body.rm .praise.show { animation: softfade 1.2s ease-out forwards !important; animation-duration: 1.2s !important; }
 body.rm .spark { animation: softfade .9s forwards !important; animation-duration: .9s !important; }
 body.rm .hud-btn.next.show { animation: none; }
-body.rm .turn-phone { transform: rotate(-90deg); }
 
 .fx-art { position: absolute; z-index: 26; animation: fxPop 900ms ease-out forwards; }
 @keyframes fxPop { 0% { opacity: 0; transform: scale(.6); } 25% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.15) translateY(-20px); } }
 .fx-ph { width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(rgba(255,255,255,.9), transparent 70%); }
 body.rm .fx-art { animation: softfade .9s forwards !important; animation-duration: .9s !important; }
+/* the oven-wall art has an oven painted in landscape position; in portrait use a plain tiled wall so it doesn't clash with the real oven */
+body.portrait #bg[data-bg="bg-oven-wall"] { background-image: repeating-conic-gradient(#F7A8C0 0 25%, #FBD3DE 0 50%) !important; background-size: 120px 120px !important; }

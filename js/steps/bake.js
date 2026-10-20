@@ -1,4 +1,4 @@
-import { fxArt, el, place, artButton, rectOf, sparkles, toLocal, wait, onTap } from '../ui.js';
+import { mapPt, fxArt, el, place, artButton, rectOf, sparkles, toLocal, wait, onTap } from '../ui.js';
 import { CUTTERS } from '../data.js';
 import { mkCanvas, iconCanvas, drawCupcake, drawCookie, shapePath, treatCanvas, batterFill } from '../draw.js';
 import { artNode } from '../assets.js';
@@ -9,6 +9,8 @@ const MIN = 0.5, MAX = 1.0;
 
 export function create(api) {
   let root, C, sub = null, area, fills = [], cupEls = [], holding = -1, raf = 0, shapes = [], cutter = null;
+  const TRAY_P = { x: 190, y: 690 };
+  let trayEl = null;
   let cutterBtns = {}, dough, slots = [], oven, dial, ovenImg, windowBox, timers = [], ended = false;
   const T = (fn, ms) => { const t = setTimeout(fn, ms); timers.push(t); return t; };
   const offs = [];
@@ -49,10 +51,10 @@ export function create(api) {
       if (sub !== 'FILL') return;
       const p = toLocal(e);
       let best = -1, bd = 95; // generous hold zone around each cup
-      CUPS.forEach((c, i) => { const d = Math.hypot(c.cx - p.x, c.cy - p.y); if (d < bd) { bd = d; best = i; } });
+      CUPS.forEach((c0, i) => { const c = mapPt(c0.cx, c0.cy); const d = Math.hypot(c.x - p.x, c.y - p.y); if (d < bd) { bd = d; best = i; } });
       if (best < 0) return;
       holding = best; e.preventDefault();
-      bag.style.display = ''; bag.style.transform = `translate(${CUPS[best].cx - 40}px, ${CUPS[best].cy - 150}px)`;
+      bag.style.display = ''; { const m = mapPt(CUPS[best].cx, CUPS[best].cy); bag.style.transform = `translate(${m.x - 40}px, ${m.y - 150}px)`; }
     });
     const release = () => {
       if (holding < 0) return;
@@ -85,9 +87,11 @@ export function create(api) {
     place(dough, 150, 140, 400, 300);
     dough.cv = mkCanvas(400, 300); dough.appendChild(dough.cv); drawDough();
     const tray = el('div', 'tray', area, { 'aria-hidden': 'true' });
-    place(tray, 600, 150, 400, 300);
+    place(tray, 600, 150, 400, 300, TRAY_P);
     tray.appendChild(artNode('tray-cookie', () => iconCanvas(400, c => { c.beginPath(); c.roundRect(4, 54, 392, 292, 30); c.fillStyle = '#C9D6E0'; c.fill(); c.lineWidth = 4; c.strokeStyle = '#7d8f9c'; c.stroke(); }), 400, 300));
-    slots = [0, 1, 2, 3, 4, 5].map(i => ({ cx: 670 + (i % 3) * 130, cy: 240 + Math.floor(i / 3) * 120 }));
+    // slot centers relative to the tray
+    slots = [0, 1, 2, 3, 4, 5].map(i => ({ rx: 70 + (i % 3) * 130, ry: 90 + Math.floor(i / 3) * 120 }));
+    trayEl = tray;
     shapes.forEach((s, i) => putOnTray(s, i));
     CUTTERS.forEach((ct, i) => {
       const b = artButton(area, { id: ct.art, label: ct.name, size: 96, cls: 'cutter', draw: (c, x, y, s) => { shapePath(c, ct.id, x, y, s * 0.8); c.fillStyle = '#fff'; c.fill(); c.lineWidth = 6; c.strokeStyle = '#A9D8F5'; c.stroke(); } });
@@ -111,8 +115,8 @@ export function create(api) {
     f.appendChild(iconCanvas(110, (c, cx, cy, s) => drawCookie(c, cx, cy, s, { shape, color: C.color || 'vanilla', baked: false })));
     place(f, x - 55, y - 55, 110, 110);
     await wait(250);
-    const s = slots[i];
-    f.style.transform = `translate(${s.cx - x}px, ${s.cy - y}px)`;
+    const s = slots[i], tr = rectOf(trayEl);
+    f.style.transform = `translate(${tr.x + s.rx - x}px, ${tr.y + s.ry - y}px)`;
     await wait(400); f.remove();
     if (ended) return;
     putOnTray(shape, i); sfx('boing');
@@ -120,7 +124,7 @@ export function create(api) {
   }
   function putOnTray(shape, i) {
     const s = slots[i];
-    const d = el('div', 'onTray', area, { 'aria-hidden': 'true' }); place(d, s.cx - 55, s.cy - 55, 110, 110);
+    const d = el('div', 'onTray', trayEl, { 'aria-hidden': 'true' }); place(d, s.rx - 55, s.ry - 55, 110, 110);
     d.appendChild(iconCanvas(110, (c, cx, cy, sz) => drawCookie(c, cx, cy, sz, { shape, color: C.color || 'vanilla', baked: false })));
   }
 
@@ -189,7 +193,7 @@ export function create(api) {
   }
   function showResult() {
     const res = el('div', 'bake-result', root, { role: 'img', 'aria-label': 'Baked treats' });
-    place(res, 730, 130, 285, 300);
+    place(res, 730, 130, 285, 300, { x: 250, y: 700 });
     for (let i = 0; i < 6; i++) {
       const t = treatCanvas(C, i, 90); res.appendChild(t);
       t.style.position = 'absolute'; t.style.left = (i % 3) * 95 + 'px'; t.style.top = 20 + Math.floor(i / 3) * 110 + 'px';
